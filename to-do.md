@@ -1,9 +1,7 @@
-to-do.md
+* improve readability of the app on iphone 5 and iphone se - the table needs work.
 
-improve readability of the app on iphone 5 and iphone se - the table needs work.
+* enter todays price into the chart, with a label 'today'. If its up on day render the bar green, if its down render it red.
 
-enter todays price into the chart, with a label 'today'. If its up on day render the bar green, if its down render it red.
+* work out why the reddit results wont render on iphones, but does on android devices.
 
-qork out why the reddit results wont render on iphones, but does on android devices.
-
-look up tutorial on testing using jest and do tests
+* look up tutorial on testing using jest and do tests
