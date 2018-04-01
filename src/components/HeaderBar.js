@@ -50,14 +50,11 @@ class HeaderBar extends Component {
 
 					<div className="modal__container">
 						<p className="modal__paragraph">
-							I have often found myself in a repititive loop that involves checking daily moves of various
-							crypto assets followed by making my way to reddit in the hope of finding out the news/gossip
-							that may have led to the move.
+							Crypto Hitters was created to make it easier to compare price fluctuations of the top 100
+							crypto assets with the news/gossip that is trending on Reddit for a given asset.
 							<br />
 							<br />
-							With this app I decided to bring together these steps by combining cold hard data (in the
-							form of the table and the chart) and hopefully enough relevant posts from the the crypto
-							reddit community. All of the code is open source and hosted on {''}
+							All of the code is open source and hosted on {''}
 							<a
 								className="white-text"
 								target="_blank"
