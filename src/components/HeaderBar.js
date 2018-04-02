@@ -50,11 +50,38 @@ class HeaderBar extends Component {
 
 					<div className="modal__container">
 						<p className="modal__paragraph">
-							Crypto Hitters was created to make it easier to compare price fluctuations of the top 100
-							crypto assets with the news/gossip that is trending on Reddit for a given asset.
+							This site was created to present price fluctuations of crypto assets and the news/gossip
+							that may have caused them. Crypto Hitters could not have been made without resources
+							provided by{' '}
+							<a
+								className="white-text"
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://coinmarketcap.com/"
+							>
+								CoinMarketCap
+							</a>
+							{', '}
+							<a
+								className="white-text"
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://www.reddit.com/"
+							>
+								Reddit
+							</a>
+							{` and `}
+							<a
+								className="white-text"
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://www.cryptocompare.com/"
+							>
+								CrytoCompare.
+							</a>
 							<br />
 							<br />
-							All of the code is open source and hosted on {''}
+							Crypto Hitters is open source and hosted on {''}
 							<a
 								className="white-text"
 								target="_blank"
@@ -63,13 +90,11 @@ class HeaderBar extends Component {
 							>
 								GitHub.
 							</a>
+							{''} If you wish to contact me directly, please do so via the contact options.
 							<br />
 							<br />
-							Please feel free to fork the code, open a request, or reach out to me via the contact links
-							with any suggestions you might have.
-							<br />
-							<br />
-							Cheers, John.
+							Cheers,
+							<br />John
 						</p>
 					</div>
 				</ReactModal>
@@ -78,10 +103,6 @@ class HeaderBar extends Component {
 					<img className="news__x float-right" src={x} onClick={this.handleCloseContactModal} alt="X icon" />
 
 					<div className="modal__container">
-						<a className="contact-modal__email-link" href="mailto:johnggribbin@gmail.com">
-							<h2 className="modal__heading">johnggribbin@gmail.com</h2>
-						</a>
-
 						<div className="contact-modal__icon-container">
 							<a
 								target="_blank"
@@ -94,6 +115,9 @@ class HeaderBar extends Component {
 								<img className="contact-modal__icon" src={github} alt="github logo" />
 							</a>
 						</div>
+						<a className="contact-modal__email-link" href="mailto:johnggribbin@gmail.com">
+							johnggribbin@gmail.com
+						</a>
 					</div>
 				</ReactModal>
 			</div>

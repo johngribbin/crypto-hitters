@@ -46,6 +46,7 @@ Contact Modal
 .contact-modal__email-link {
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 1em;
 	color: white;
 }
 
@@ -75,6 +76,7 @@ BurgerMenu
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
 	height: 24px;
+	margin-right: 1em;
 	width: 24px;
 }
 
@@ -90,18 +92,12 @@ BurgerMenu
 	border-top: 0;
 	background: #536976;
 	font-size: 1.2em;
-	padding: 2.5em 1.5em 0;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-	fill: #373a47;
+	padding: 1em 1.5em 0;
 }
 
 /* Wrapper for item list */
 .bm-item-list {
 	color: white;
-	padding: 0.8em;
 }
 
 /* Styling of overlay */
@@ -326,6 +322,7 @@ Modal
 	display: flex;
 	flex-direction: column;
 	margin-top: 2em;
+	padding: 1em;
 }
 
 .modal__heading,
