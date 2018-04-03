@@ -38,53 +38,51 @@ class App extends Component {
 
 	render() {
 		return (
-			<div>
-				<Switch>
-					<Route
-						exact
-						path="/"
-						render={props => (
-							<div>
-								<BurgerMenu />
-								<HeaderBar />
-								<SearchBar
-									className={'hide-on-ipad'}
-									searchTerm={this.state.searchTerm}
-									handleSearchTerm={this.handleSearchTerm}
-								/>
-
-								<CryptoTable
-									searchTerm={this.state.searchTerm}
-									handleChosenCryptoName={this.handleChosenCryptoName}
-									handleChosenCryptoSymbol={this.handleChosenCryptoSymbol}
-								/>
-							</div>
-						)}
-					/>
-
-					<Route
-						path="/news"
-						render={props => (
-							<CryptoNews
-								chosenCryptoName={this.state.chosenCryptoName}
-								chosenCryptoSymbol={this.state.chosenCryptoSymbol}
+			<Switch>
+				<Route
+					exact
+					path="/"
+					render={props => (
+						<div>
+							<BurgerMenu />
+							<HeaderBar />
+							<SearchBar
+								className={'hide-on-ipad'}
+								searchTerm={this.state.searchTerm}
+								handleSearchTerm={this.handleSearchTerm}
 							/>
-						)}
-					/>
 
-					<Route
-						path="/chart"
-						render={props => (
-							<CryptoChart
-								chosenCryptoName={this.state.chosenCryptoName}
-								chosenCryptoSymbol={this.state.chosenCryptoSymbol}
+							<CryptoTable
+								searchTerm={this.state.searchTerm}
+								handleChosenCryptoName={this.handleChosenCryptoName}
+								handleChosenCryptoSymbol={this.handleChosenCryptoSymbol}
 							/>
-						)}
-					/>
+						</div>
+					)}
+				/>
 
-					<Route render={() => <h1>Page not found</h1>} />
-				</Switch>
-			</div>
+				<Route
+					path="/news"
+					render={props => (
+						<CryptoNews
+							chosenCryptoName={this.state.chosenCryptoName}
+							chosenCryptoSymbol={this.state.chosenCryptoSymbol}
+						/>
+					)}
+				/>
+
+				<Route
+					path="/chart"
+					render={props => (
+						<CryptoChart
+							chosenCryptoName={this.state.chosenCryptoName}
+							chosenCryptoSymbol={this.state.chosenCryptoSymbol}
+						/>
+					)}
+				/>
+
+				<Route render={() => <h1>Page not found</h1>} />
+			</Switch>
 		);
 	}
 }
