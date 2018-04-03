@@ -91,7 +91,6 @@ BurgerMenu
 	border-right: 0;
 	border-top: 0;
 	background: #536976;
-	font-size: 1.2em;
 	padding: 1em 1.5em 0;
 }
 
@@ -205,6 +204,10 @@ CryptoNews
 	border: 3px solid black;
 }
 
+.news__icon-container {
+	text-align: center;
+}
+
 .news__left-arrow,
 .news__chart-icon,
 .news__home-icon {
@@ -217,7 +220,17 @@ CryptoNews
 	margin: 0.5em;
 	padding: 0.25em;
 	transition: background-color 0.5s;
+	position: fixed;
 	width: 50px;
+}
+
+.news__left-arrow {
+	left: 0;
+}
+
+.news__chart-icon,
+.news__home-icon {
+	right: 0;
 }
 
 .news__question-mark {
@@ -232,10 +245,6 @@ CryptoNews
 
 .news__x {
 	width: 25px;
-}
-
-.news__icon-container {
-	text-align: center;
 }
 
 .news__web-search-icon {
@@ -283,8 +292,8 @@ CryptoNews
 	flex-wrap: wrap;
 	justify-content: space-around;
 	list-style-type: none;
+	margin: 0em 3em 0em 3em;
 	padding: 0;
-	margin: 0;
 }
 
 .news__reddit-item {
