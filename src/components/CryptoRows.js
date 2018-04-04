@@ -17,21 +17,9 @@ class CryptoRows extends Component {
 		const tickerRow = document.getElementById(`crypto-rows__${tickerSymbol}-row`);
 
 		if (event.type === 'mouseenter') {
-			/*
-			tickerLogo.setAttribute(
-				'src',
-				`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/color/${tickerSymbol.toLowerCase()}.png`
-			);
-			*/
 			tickerLogo.classList.add('crypto-rows__logo--spin');
 			tickerRow.classList.add('crypto-rows__row--light-up');
 		} else {
-			/*
-			tickerLogo.setAttribute(
-				'src',
-				`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/black/${tickerSymbol.toLowerCase()}.png`
-			);
-			*/
 			tickerLogo.classList.remove('crypto-rows__logo--spin');
 			tickerRow.classList.remove('crypto-rows__row--light-up');
 		}

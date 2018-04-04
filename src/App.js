@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar';
 import CryptoTable from './components/CryptoTable';
 import CryptoNews from './components/CryptoNews';
 import CryptoChart from './components/CryptoChart';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -38,51 +38,53 @@ class App extends Component {
 
 	render() {
 		return (
-			<Switch>
-				<Route
-					exact
-					path="/"
-					render={props => (
-						<div>
-							<BurgerMenu />
-							<HeaderBar />
-							<SearchBar
-								className={'hide-on-ipad'}
-								searchTerm={this.state.searchTerm}
-								handleSearchTerm={this.handleSearchTerm}
+			<BrowserRouter>
+				<Switch>
+					<Route
+						exact
+						path="/"
+						render={props => (
+							<div>
+								<BurgerMenu />
+								<HeaderBar />
+								<SearchBar
+									className={'hide-on-ipad'}
+									searchTerm={this.state.searchTerm}
+									handleSearchTerm={this.handleSearchTerm}
+								/>
+
+								<CryptoTable
+									searchTerm={this.state.searchTerm}
+									handleChosenCryptoName={this.handleChosenCryptoName}
+									handleChosenCryptoSymbol={this.handleChosenCryptoSymbol}
+								/>
+							</div>
+						)}
+					/>
+
+					<Route
+						path="/news"
+						render={props => (
+							<CryptoNews
+								chosenCryptoName={this.state.chosenCryptoName}
+								chosenCryptoSymbol={this.state.chosenCryptoSymbol}
 							/>
+						)}
+					/>
 
-							<CryptoTable
-								searchTerm={this.state.searchTerm}
-								handleChosenCryptoName={this.handleChosenCryptoName}
-								handleChosenCryptoSymbol={this.handleChosenCryptoSymbol}
+					<Route
+						path="/chart"
+						render={props => (
+							<CryptoChart
+								chosenCryptoName={this.state.chosenCryptoName}
+								chosenCryptoSymbol={this.state.chosenCryptoSymbol}
 							/>
-						</div>
-					)}
-				/>
+						)}
+					/>
 
-				<Route
-					path="/news"
-					render={props => (
-						<CryptoNews
-							chosenCryptoName={this.state.chosenCryptoName}
-							chosenCryptoSymbol={this.state.chosenCryptoSymbol}
-						/>
-					)}
-				/>
-
-				<Route
-					path="/chart"
-					render={props => (
-						<CryptoChart
-							chosenCryptoName={this.state.chosenCryptoName}
-							chosenCryptoSymbol={this.state.chosenCryptoSymbol}
-						/>
-					)}
-				/>
-
-				<Route render={() => <h1>Page not found</h1>} />
-			</Switch>
+					<Route render={() => <h1>Page not found</h1>} />
+				</Switch>
+			</BrowserRouter>
 		);
 	}
 }
