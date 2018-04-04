@@ -34,6 +34,7 @@ class CryptoTable extends Component {
 		if (event.target.checked === true) {
 			sortedTickers = currentTickers.sort(sortStringData(headerName));
 		} else {
+			// sort column descending on second click
 			sortedTickers = currentTickers.sort(sortStringData(headerName, 'desc'));
 		}
 
@@ -50,6 +51,7 @@ class CryptoTable extends Component {
 		if (event.target.checked === true) {
 			sortedTickers = sortNumberData(currentTickers, headerName);
 		} else {
+			// sort the columb smallest to largest on second click
 			sortedTickers = sortNumberData(currentTickers, headerName).reverse();
 		}
 

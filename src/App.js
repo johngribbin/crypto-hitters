@@ -13,6 +13,7 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 
+		// if user visits 'cryptoNews' or 'cryptoChart' pages the default chosen crypto asset is Bitcoin
 		this.state = {
 			searchTerm: '',
 			chosenCryptoName: 'Bitcoin',
@@ -24,14 +25,17 @@ class App extends Component {
 		this.handleChosenCryptoSymbol = this.handleChosenCryptoSymbol.bind(this);
 	}
 
+	// the term entered into 'searchBar' component
 	handleSearchTerm(searchTerm) {
 		this.setState({ searchTerm: searchTerm });
 	}
 
+	// when 'news' arrow is clicked for a crypto asset row in the table
 	handleChosenCryptoName(chosenCryptoName) {
 		this.setState({ chosenCryptoName: chosenCryptoName });
 	}
 
+	// when 'news' arrow is clicked for a crypto asset row in the table
 	handleChosenCryptoSymbol(chosenCryptoSymbol) {
 		this.setState({ chosenCryptoSymbol: chosenCryptoSymbol });
 	}

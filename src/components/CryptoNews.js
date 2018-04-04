@@ -23,7 +23,7 @@ class CryptoNews extends Component {
 			redditResults: [],
 			showModal: false
 		};
-
+		// the modal that opens when '?' at top of page is clicked.
 		this.handleOpenModal = this.handleOpenModal.bind(this);
 		this.handleCloseModal = this.handleCloseModal.bind(this);
 	}

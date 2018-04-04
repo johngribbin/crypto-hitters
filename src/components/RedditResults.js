@@ -28,6 +28,7 @@ class RedditResults extends Component {
 					</a>
 					<a
 						className={
+							// if subreddit name contains the chosenCryptoName, render the link green
 							result.data.subreddit.match(new RegExp(this.props.chosenCryptoName, 'i'))
 								? 'news__reddit-item-link float-right regular-green'
 								: 'news__reddit-item-link float-right'

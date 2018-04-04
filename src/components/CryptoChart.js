@@ -15,6 +15,7 @@ class CryptoChart extends Component {
 		};
 	}
 
+	// 'obj.close' is the 'closing price' on the day
 	componentDidMount() {
 		getChartData(this.props.chosenCryptoSymbol).then(response => {
 			this.setState({

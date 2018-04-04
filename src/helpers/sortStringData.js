@@ -1,3 +1,4 @@
+// sort column alpabetically A-Z ('asc'), then Z-A when 'desc' is added during execution
 export default function sortStringData(key, order = 'asc') {
 	return function(a, b) {
 		if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {

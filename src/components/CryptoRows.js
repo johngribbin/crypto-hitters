@@ -11,6 +11,7 @@ class CryptoRows extends Component {
 		this.handleChosenCrypto = this.handleChosenCrypto.bind(this);
 	}
 
+	// spin the crypto symbol, and brighten the text in the row on arrow button hover
 	handleArrowHover(event) {
 		const tickerSymbol = event.target.id;
 		const tickerLogo = document.getElementById(`crypto-rows__${tickerSymbol}-image`);
@@ -25,6 +26,7 @@ class CryptoRows extends Component {
 		}
 	}
 
+	// send the chosenCryptoName and chosenCryptoSymbol to the application state
 	handleChosenCrypto(event) {
 		this.props.handleChosenCryptoName(event.target.name);
 		this.props.handleChosenCryptoSymbol(event.target.id);
@@ -34,11 +36,13 @@ class CryptoRows extends Component {
 		const searchTerm = this.props.searchTerm;
 		var tickers;
 
+		// render only the tickers with a name or symbol name that match the searchTerm entered into searchBar
 		if (searchTerm !== '') {
 			const filteredTickers = this.props.tickers.filter(
 				ticker => `${ticker.name} ${ticker.symbol}`.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0
 			);
 			tickers = filteredTickers;
+			// render all 100 ticker rows when nothing is typed into searchBar
 		} else {
 			tickers = this.props.tickers;
 		}
@@ -59,6 +63,7 @@ class CryptoRows extends Component {
 				<td className="crypto-table__table-row-data hide-on-tablet">
 					${Number(ticker.market_cap_usd).toLocaleString()}
 				</td>
+				{/* render % increase as green text, % decrease as red text*/}
 				<td className={ticker.percent_change_24h < 0 ? 'red-text' : 'green-text'}>
 					{ticker.percent_change_24h}%
 				</td>
