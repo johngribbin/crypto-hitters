@@ -48,16 +48,18 @@ class CryptoRows extends Component {
 		}
 		return tickers.map(ticker => (
 			<tr key={ticker.name} className="crypto-rows__row" id={`crypto-rows__${ticker.symbol}-row`}>
+				<td className="crypto-table__table-row-data">{ticker.rank}</td>
 				<td className="crypto-table__table-row-data">
-					{ticker.rank}
-					<img
-						className="crypto-rows__ticker-image"
-						id={`crypto-rows__${ticker.symbol}-image`}
-						src={`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/color/${ticker.symbol.toLowerCase()}.png`}
-						alt={ticker.symbol}
-					/>
+					<div className="crypto-rows__crypto-name-data-content">
+						<img
+							className="crypto-rows__ticker-image"
+							id={`crypto-rows__${ticker.symbol}-image`}
+							src={`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/color/${ticker.symbol.toLowerCase()}.png`}
+							alt={ticker.symbol}
+						/>
+						{ticker.name}
+					</div>
 				</td>
-				<td className="crypto-table__table-row-data">{ticker.name}</td>
 				<td className="crypto-table__table-row-data hide-on-ipad">{ticker.symbol}</td>
 				<td className="crypto-table__table-row-data">${ticker.price_usd.substring(0, 7)}</td>
 				<td className="crypto-table__table-row-data hide-on-tablet">
