@@ -10,33 +10,36 @@ a {
 	outline: 0;
 }
 
+body {
+	background: rgb(34, 44, 49);
+}
+
 /* --------------------
 HeaderBar
 -------------------- */
 .header-bar__container {
-	background-color: #405059;
-	border: 1px solid #536976;
-	color: white;
+	background-color: rgb(34, 44, 49);
 	display: flex;
 	justify-content: space-between;
 	padding: 0% 2.5% 0% 2.5%;
 }
 
-.header-bar__header-text {
-	font-family: 'VT323', monospace;
+.header-bar__app-title {
+	color: white;
 }
 
 .header-bar__icon-container {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-	width: 5em;
+	width: 7em;
 }
 
 .material-icons {
 	color: rgb(186, 201, 208);
 }
 
+/* sizing options for the material-icons */
 .material-icons.md-18 {
 	font-size: 18px;
 }
@@ -95,9 +98,9 @@ BurgerMenu
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-	height: 24px;
+	height: 30px;
 	margin-right: 1em;
-	width: 24px;
+	width: 30px;
 }
 
 /* Color/shape of close button cross */
@@ -128,17 +131,23 @@ BurgerMenu
 SearchBar
 -------------------- */
 .search-bar__container {
-	margin: 0.5em;
+	margin-bottom: 2em;
 	text-align: right;
 	margin-right: 2.5%;
 }
 
-.search-bar__input,
-.search-bar__button {
-	border: 1px solid #2c373d;
+.search-bar__input {
+	border: 1px solid rgb(82, 105, 117);
+	background-color: rgb(42, 54, 59);
+	color: white;
 	font-size: 1.1em;
 	padding: 0.5em;
 	margin: 0.5em 0em 0.5em 0.5em;
+	width: 15em;
+}
+
+.search-bar__input::placeholder {
+	color: rgb(82, 105, 117);
 }
 
 /* --------------------
@@ -153,25 +162,8 @@ CryptoTable & CryptoRows
 	width: 40px;
 }
 
-.crypto-rows__right-arrow {
-	background-color: white;
-	border-radius: 10px;
-	-webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	padding: 0.1em;
-	transition: all 0.5s;
-	width: 40px;
-}
-
-.crypto-rows__right-arrow:hover {
-	background-color: rgba(255, 255, 255, 0.7);
-}
-
-.crypto-rows__right-arrow:active {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+.sorting-arrow-color {
+	color: rgb(82, 105, 117);
 }
 
 .crypto-table__table {
@@ -184,10 +176,6 @@ CryptoTable & CryptoRows
 
 .crypto-table__header-text {
 	color: white;
-}
-
-.material-icons__sorting-arrows {
-	margin-top: 0.25em;
 }
 
 .crypto-table__checkbox {
@@ -230,6 +218,20 @@ CryptoTable & CryptoRows
 
 .crypto-rows__row--light-up {
 	color: white;
+}
+
+/* --------------------
+FooterBar
+-------------------- */
+.footer-bar__container {
+	background-color: rgb(29, 33, 36);
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+}
+
+.footer-bar__app-title {
+	color: rgb(82, 105, 117);
 }
 
 /* --------------------
@@ -475,10 +477,6 @@ MEDIA QUERIES
 
 	.crypto-table__table {
 		width: 100%;
-	}
-
-	.crypto-rows__ticker-image {
-		margin: 0em 0.5em 0em 0em;
 	}
 
 	.crypto-table__table-row-data {

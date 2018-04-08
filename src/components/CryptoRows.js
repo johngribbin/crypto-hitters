@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ArrowRight from '../image/arrow-right.svg';
 import PropTypes from 'prop-types';
 
 class CryptoRows extends Component {
@@ -70,10 +71,8 @@ class CryptoRows extends Component {
 				</td>
 				<td>
 					<Link to="/news">
-						{/*
 						<img
-							className="crypto-rows__right-arrow"
-							src={rightArrow}
+							src={ArrowRight}
 							alt="right arrow"
 							name={ticker.name}
 							id={ticker.symbol}
@@ -81,16 +80,6 @@ class CryptoRows extends Component {
 							onMouseLeave={this.handleArrowHover}
 							onClick={this.handleChosenCrypto}
 						/>
-					*/}
-						<div
-							name={ticker.name}
-							id={ticker.symbol}
-							//onMouseEnter={this.handleArrowHover}
-							//onMouseLeave={this.handleArrowHover}
-							onClick={this.handleChosenCrypto}
-						>
-							<i class="material-icons md-36">keyboard_arrow_right</i>
-						</div>
 					</Link>
 				</td>
 			</tr>

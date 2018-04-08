@@ -3,6 +3,7 @@ import BurgerMenu from './components/BurgerMenu';
 import HeaderBar from './components/HeaderBar';
 import SearchBar from './components/SearchBar';
 import CryptoTable from './components/CryptoTable';
+import FooterBar from './components/FooterBar';
 import CryptoNews from './components/CryptoNews';
 import CryptoChart from './components/CryptoChart';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -62,6 +63,7 @@ class App extends Component {
 									handleChosenCryptoName={this.handleChosenCryptoName}
 									handleChosenCryptoSymbol={this.handleChosenCryptoSymbol}
 								/>
+								<FooterBar />
 							</div>
 						)}
 					/>
@@ -69,20 +71,26 @@ class App extends Component {
 					<Route
 						path="/news"
 						render={props => (
-							<CryptoNews
-								chosenCryptoName={this.state.chosenCryptoName}
-								chosenCryptoSymbol={this.state.chosenCryptoSymbol}
-							/>
+							<div>
+								<CryptoNews
+									chosenCryptoName={this.state.chosenCryptoName}
+									chosenCryptoSymbol={this.state.chosenCryptoSymbol}
+								/>
+								<FooterBar />
+							</div>
 						)}
 					/>
 
 					<Route
 						path="/chart"
 						render={props => (
-							<CryptoChart
-								chosenCryptoName={this.state.chosenCryptoName}
-								chosenCryptoSymbol={this.state.chosenCryptoSymbol}
-							/>
+							<div>
+								<CryptoChart
+									chosenCryptoName={this.state.chosenCryptoName}
+									chosenCryptoSymbol={this.state.chosenCryptoSymbol}
+								/>
+								<FooterBar />
+							</div>
 						)}
 					/>
 

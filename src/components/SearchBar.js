@@ -17,7 +17,7 @@ class SearchBar extends Component {
 			<div className="search-bar__container hide-on-phone">
 				<input
 					className="search-bar__input"
-					placeholder={`filter by name/symbol`}
+					placeholder={`filter list by name/symbol`}
 					value={this.props.searchTerm}
 					onChange={this.handleSearchTerm}
 				/>
