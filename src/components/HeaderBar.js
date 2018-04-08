@@ -38,7 +38,7 @@ class HeaderBar extends Component {
 	render() {
 		return (
 			<div className="header-bar__container">
-				<h1 className="header-bar__header-text">Crypto Hitters</h1>
+				<h1 className="header-bar__header-text">CRYPTO HITTERS</h1>
 
 				<div className="header-bar__icon-container">
 					<i class="material-icons md-36" onClick={this.handleOpenAboutModal}>

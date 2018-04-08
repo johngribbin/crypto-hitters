@@ -68,7 +68,7 @@ class CryptoTable extends Component {
 							<td className="crypto-table__table-header-data">
 								<h3>
 									<label className="crypto-table__header-text">
-										Rank
+										RANK
 										<br />
 										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
@@ -83,7 +83,7 @@ class CryptoTable extends Component {
 							<td className="crypto-table__table-header-data">
 								<h3>
 									<label className="crypto-table__header-text">
-										Name
+										NAME
 										<br />
 										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
@@ -98,7 +98,7 @@ class CryptoTable extends Component {
 							<td className="crypto-table__table-header-data hide-on-ipad">
 								<h3>
 									<label className="crypto-table__header-text">
-										Symbol
+										SYMBOL
 										<br />
 										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
@@ -113,7 +113,7 @@ class CryptoTable extends Component {
 							<td className="crypto-table__table-header-data">
 								<h3>
 									<label className="crypto-table__header-text">
-										Price
+										PRICE
 										<br />
 										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
@@ -128,7 +128,7 @@ class CryptoTable extends Component {
 							<td className="crypto-table__table-header-data hide-on-tablet">
 								<h3>
 									<label className="crypto-table__header-text">
-										Market Cap
+										MARKET CAP
 										<br />
 										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
@@ -143,7 +143,7 @@ class CryptoTable extends Component {
 							<td className="crypto-table__table-header-data">
 								<h3>
 									<label className="crypto-table__header-text">
-										Change (24hr)
+										CHANGE (24HR)
 										<br />
 										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
@@ -157,9 +157,9 @@ class CryptoTable extends Component {
 							</td>
 							<td className="crypto-table__table-header-data">
 								<h3>
-									<label className="crypto-table__header-text">News</label>
+									<label className="crypto-table__header-text">NEWS</label>
 									<br />
-									<i class="material-icons rotate-90">compare_arrows</i>
+									<i class="material-icons rotate-90 opaque">compare_arrows</i>
 								</h3>
 							</td>
 						</tr>

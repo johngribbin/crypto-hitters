@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import rightArrow from '../image/right-arrow.png';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 

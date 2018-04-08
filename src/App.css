@@ -183,14 +183,11 @@ CryptoTable & CryptoRows
 }
 
 .crypto-table__header-text {
-	text-shadow: 1px 1px black;
 	color: white;
-	text-decoration: underline;
 }
 
-.crypto-table__sorting-arrows {
+.material-icons__sorting-arrows {
 	margin-top: 0.25em;
-	width: 20px;
 }
 
 .crypto-table__checkbox {
