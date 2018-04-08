@@ -18,20 +18,40 @@ HeaderBar
 	border: 1px solid #536976;
 	color: white;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	padding: 0% 2.5% 0% 2.5%;
 }
 
 .header-bar__header-text {
 	font-family: 'VT323', monospace;
 }
 
-.header-bar__link {
-	color: white;
-	margin-top: 1em;
-	text-decoration: underline;
+.header-bar__icon-container {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	width: 5em;
 }
 
-.header-bar__link:hover {
+.material-icons {
+	color: rgb(186, 201, 208);
+}
+
+.material-icons.md-18 {
+	font-size: 18px;
+}
+.material-icons.md-24 {
+	font-size: 24px;
+}
+.material-icons.md-36 {
+	font-size: 36px;
+}
+.material-icons.md-48 {
+	font-size: 48px;
+}
+
+.material-icons:hover {
+	color: white;
 	cursor: pointer;
 }
 
@@ -109,7 +129,8 @@ SearchBar
 -------------------- */
 .search-bar__container {
 	margin: 0.5em;
-	text-align: center;
+	text-align: right;
+	margin-right: 2.5%;
 }
 
 .search-bar__input,
@@ -117,7 +138,7 @@ SearchBar
 	border: 1px solid #2c373d;
 	font-size: 1.1em;
 	padding: 0.5em;
-	margin: 0.5em;
+	margin: 0.5em 0em 0.5em 0.5em;
 }
 
 /* --------------------
@@ -380,6 +401,10 @@ CryptoChart
 /* --------------------
 REUSABLE STYLES
 -------------------- */
+.rotate-90 {
+	transform: rotate(90deg);
+}
+
 .center-text {
 	text-align: center;
 }

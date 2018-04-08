@@ -38,13 +38,18 @@ class HeaderBar extends Component {
 	render() {
 		return (
 			<div className="header-bar__container">
-				<a className="header-bar__link hide-on-phone" onClick={this.handleOpenAboutModal}>
-					<h3 className="header-bar__link-text">About</h3>
-				</a>
 				<h1 className="header-bar__header-text">Crypto Hitters</h1>
-				<a className="header-bar__link hide-on-phone" onClick={this.handleOpenContactModal}>
-					<h3 className="header-bar__link-text">Contact</h3>
-				</a>
+
+				<div className="header-bar__icon-container">
+					<i class="material-icons md-36" onClick={this.handleOpenAboutModal}>
+						info_outline
+					</i>
+
+					<i class="material-icons md-36" onClick={this.handleOpenContactModal}>
+						email
+					</i>
+				</div>
+
 				<ReactModal isOpen={this.state.showAboutModal} contentLabel="Minimal Modal Example">
 					<img className="news__x float-right" src={x} onClick={this.handleCloseAboutModal} alt="X icon" />
 

@@ -71,6 +71,7 @@ class CryptoRows extends Component {
 				</td>
 				<td>
 					<Link to="/news">
+						{/*
 						<img
 							className="crypto-rows__right-arrow"
 							src={rightArrow}
@@ -81,6 +82,16 @@ class CryptoRows extends Component {
 							onMouseLeave={this.handleArrowHover}
 							onClick={this.handleChosenCrypto}
 						/>
+					*/}
+						<div
+							name={ticker.name}
+							id={ticker.symbol}
+							//onMouseEnter={this.handleArrowHover}
+							//onMouseLeave={this.handleArrowHover}
+							onClick={this.handleChosenCrypto}
+						>
+							<i class="material-icons md-36">keyboard_arrow_right</i>
+						</div>
 					</Link>
 				</td>
 			</tr>

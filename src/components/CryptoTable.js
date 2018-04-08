@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import sortingArrows from '../image/sort.png';
 import CryptoRows from './CryptoRows';
 import getAllTickers from '../helpers/getAllTickers';
 import sortStringData from '../helpers/sortStringData';
@@ -71,11 +70,7 @@ class CryptoTable extends Component {
 									<label className="crypto-table__header-text">
 										Rank
 										<br />
-										<img
-											className="crypto-table__sorting-arrows"
-											src={sortingArrows}
-											alt="sort arrow"
-										/>
+										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
 											type="checkbox"
 											className="crypto-table__checkbox"
@@ -90,11 +85,7 @@ class CryptoTable extends Component {
 									<label className="crypto-table__header-text">
 										Name
 										<br />
-										<img
-											className="crypto-table__sorting-arrows"
-											src={sortingArrows}
-											alt="sort arrow"
-										/>
+										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
 											type="checkbox"
 											className="crypto-table__checkbox"
@@ -109,11 +100,7 @@ class CryptoTable extends Component {
 									<label className="crypto-table__header-text">
 										Symbol
 										<br />
-										<img
-											className="crypto-table__sorting-arrows"
-											src={sortingArrows}
-											alt="sort arrow"
-										/>
+										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
 											type="checkbox"
 											className="crypto-table__checkbox"
@@ -128,11 +115,7 @@ class CryptoTable extends Component {
 									<label className="crypto-table__header-text">
 										Price
 										<br />
-										<img
-											className="crypto-table__sorting-arrows"
-											src={sortingArrows}
-											alt="sort arrow"
-										/>
+										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
 											type="checkbox"
 											className="crypto-table__checkbox"
@@ -147,11 +130,7 @@ class CryptoTable extends Component {
 									<label className="crypto-table__header-text">
 										Market Cap
 										<br />
-										<img
-											className="crypto-table__sorting-arrows"
-											src={sortingArrows}
-											alt="sort arrow"
-										/>
+										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
 											type="checkbox"
 											className="crypto-table__checkbox"
@@ -166,11 +145,7 @@ class CryptoTable extends Component {
 									<label className="crypto-table__header-text">
 										Change (24hr)
 										<br />
-										<img
-											className="crypto-table__sorting-arrows"
-											src={sortingArrows}
-											alt="sort arrow"
-										/>
+										<i class="material-icons rotate-90">compare_arrows</i>
 										<input
 											type="checkbox"
 											className="crypto-table__checkbox"
@@ -184,11 +159,7 @@ class CryptoTable extends Component {
 								<h3>
 									<label className="crypto-table__header-text">News</label>
 									<br />
-									<img
-										className="crypto-table__sorting-arrows opaque"
-										src={sortingArrows}
-										alt="sort arrow"
-									/>
+									<i class="material-icons rotate-90">compare_arrows</i>
 								</h3>
 							</td>
 						</tr>
