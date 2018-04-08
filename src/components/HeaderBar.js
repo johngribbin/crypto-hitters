@@ -45,7 +45,7 @@ class HeaderBar extends Component {
 						info_outline
 					</i>
 
-					<i class="material-icons md-36" onClick={this.handleOpenContactModal}>
+					<i className="material-icons md-36" onClick={this.handleOpenContactModal}>
 						email
 					</i>
 				</div>
