@@ -38,10 +38,10 @@ class CryptoChart extends Component {
 		return (
 			<div className="chart__container">
 				<Link to="/news">
-					<img className="news__left-arrow" src={leftArrow} alt="left arrow" />
+					<i class="material-icons md-36 float-left">keyboard_arrow_left</i>
 				</Link>
 				<Link to="/">
-					<img className="news__home-icon float-right" src={home} alt="home symbol" />
+					<i class="material-icons float-right">home</i>
 				</Link>
 				<div className="chart__chart">
 					<Bar
