@@ -24,24 +24,27 @@ class RedditResults extends Component {
 								: result.data.title}
 						</p>
 					</div>
-					<div className="news__reddit-item-content--bottom">
-						<p>{result.data.num_comments} comments</p>
-						<a className="news__reddit-item-link" href={result.data.url} target="_blank">
-							LINK
-						</a>
-						<a
-							className={
-								// if subreddit name contains the chosenCryptoName, render the link green
-								result.data.subreddit.match(new RegExp(this.props.chosenCryptoName, 'i'))
-									? 'news__reddit-item-link float-right regular-green'
-									: 'news__reddit-item-link float-right'
-							}
-							href={`https://www.reddit.com/r/${result.data.subreddit}`}
-							target="_blank"
-							name={result.data.subreddit}
-						>
-							SUBREDDIT
-						</a>
+					<div className="news__reddit-item-content--bottom small-text">
+						<i class="material-icons">forum</i>
+						<p>{result.data.num_comments} COMMENTS</p>
+						<div>
+							<a className="news__reddit-item-link" href={result.data.url} target="_blank">
+								<i class="material-icons">link</i>LINK
+							</a>
+							<a
+								className={
+									// if subreddit name contains the chosenCryptoName, render the link green
+									result.data.subreddit.match(new RegExp(this.props.chosenCryptoName, 'i'))
+										? 'news__reddit-item-link float-right regular-green'
+										: 'news__reddit-item-link float-right'
+								}
+								href={`https://www.reddit.com/r/${result.data.subreddit}`}
+								target="_blank"
+								name={result.data.subreddit}
+							>
+								<i class="material-icons">open_in_new</i>SUBREDDIT
+							</a>
+						</div>
 					</div>
 				</div>
 			</li>
