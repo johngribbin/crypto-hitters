@@ -56,12 +56,28 @@ class CryptoNews extends Component {
 		ReactModal.setAppElement('#root');
 
 		return (
-			<div className="news__container">
-				<div className="news__reddit-container">
-					<div className="news__icon-container">
+			<div>
+				<h1>CRYPTO HITTERS</h1>
+				<section className="news__header-section">
+					<div className="news__icon-container--left">
 						<Link to="/">
-							<i class="material-icons md-36 float-left">keyboard_arrow_left</i>
+							<i class="material-icons md-48 float-left">keyboard_arrow_left</i>
 						</Link>
+					</div>
+
+					<div className="news__header-container-center">
+						<div className="news__crypto-logo-name-container">
+							<img
+								className="news__ticker-image"
+								src={`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/color/${this.props.chosenCryptoSymbol.toLowerCase()}.png`}
+								alt={this.props.chosenCryptoSymbol}
+							/>
+							<h1 className="news__header-text">{this.props.chosenCryptoName}</h1>
+						</div>
+						REDDIT COMMUNITY RESULTS
+					</div>
+
+					<div className="news__icon-container--right">
 						<a
 							href={`https://duckduckgo.com/?q=${
 								this.props.chosenCryptoName
@@ -76,36 +92,35 @@ class CryptoNews extends Component {
 						<i class="material-icons md-36" onClick={this.handleOpenModal}>
 							help
 						</i>
-
-						<ReactModal isOpen={this.state.showModal} contentLabel="Minimal Modal Example">
-							<i class="material-icons md-36 float-right" onClick={this.handleCloseModal}>
-								close
-							</i>
-							<div className="modal__container">
-								<h2 className="modal__heading">Reddit Community Results</h2>
-								<p className="modal__paragraph">
-									This page aims to bring together the most relevant Reddit posts for the crypto asset
-									chosen.
-								</p>
-								<ul className="modal__list">
-									<li>Posts with more comments are given priority.</li>
-									<li>
-										Green colored SubReddit links signify a greater chance of a relevant post and
-										will always appear first.
-									</li>
-									<li>
-										Use the chart icon at top right of the page to view the previous 60 day price
-										action.
-									</li>
-									<li>
-										If posts displayed are not satisfactory, please make use of the web search (by
-										DuckDuckGo) shortcut at the bottom of the page.
-									</li>
-								</ul>
-							</div>
-						</ReactModal>
 					</div>
+				</section>
 
+				<ReactModal isOpen={this.state.showModal} contentLabel="Minimal Modal Example">
+					<i class="material-icons md-36 float-right" onClick={this.handleCloseModal}>
+						close
+					</i>
+					<div className="modal__container">
+						<h2 className="modal__heading">Reddit Community Results</h2>
+						<p className="modal__paragraph">
+							This page aims to bring together the most relevant Reddit posts for the crypto asset chosen.
+						</p>
+						<ul className="modal__list">
+							<li>Posts with more comments are given priority.</li>
+							<li>
+								Green colored SubReddit links signify a greater chance of a relevant post and will
+								always appear first.
+							</li>
+							<li>
+								Use the chart icon at top right of the page to view the previous 60 day price action.
+							</li>
+							<li>
+								If posts displayed are not satisfactory, please make use of the web search (by
+								DuckDuckGo) shortcut at the bottom of the page.
+							</li>
+						</ul>
+					</div>
+				</ReactModal>
+				<div className="news__reddit-container">
 					<ul className="news__reddit-list">
 						<RedditResults
 							redditResults={this.state.redditResults}

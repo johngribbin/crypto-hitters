@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import getChartData from '../helpers/getChartData';
-import leftArrow from '../image/left-arrow.png';
-import home from '../image/home.png';
 import { Bar } from 'react-chartjs-2';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';

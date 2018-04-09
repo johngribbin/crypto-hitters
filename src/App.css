@@ -4,6 +4,8 @@
 * {
 	font-family: 'Inconsolata', monospace;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -21,7 +23,7 @@ HeaderBar
 	background-color: rgb(34, 44, 49);
 	display: flex;
 	justify-content: space-between;
-	padding: 0% 2.5% 0% 2.5%;
+	padding: 2em 2.5% 0% 2.5%;
 }
 
 .header-bar__app-title {
@@ -133,7 +135,7 @@ SearchBar
 .search-bar__container {
 	margin-bottom: 2em;
 	text-align: right;
-	margin-right: 2.5%;
+	margin: 1em 2.5% 2em 0;
 }
 
 .search-bar__input {
@@ -162,15 +164,18 @@ CryptoTable & CryptoRows
 	width: 40px;
 }
 
-.sorting-arrow-color {
+.sorting-arrow {
 	color: rgb(82, 105, 117);
+	margin-bottom: 1em;
 }
 
 .crypto-table__table {
+	background: #2c373d;
 	border: 3px solid #2c373d;
 	color: rgba(255, 255, 255, 0.8);
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 1em;
 	width: 95%;
 }
 
@@ -227,7 +232,8 @@ FooterBar
 	background-color: rgb(29, 33, 36);
 	display: flex;
 	justify-content: center;
-	margin-top: 1em;
+	margin-top: 2em;
+	padding: 2em;
 }
 
 .footer-bar__app-title {
@@ -238,90 +244,60 @@ FooterBar
 CryptoNews
 -------------------- */
 .news__container {
-	border: 3px solid black;
 }
 
-.news__icon-container {
-	text-align: center;
+.news__header-section {
+	align-items: center;
+	background-color: rgb(42, 54, 59);
+	display: flex;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding: 1em 0em 1em 0em;
+	width: 100%;
 }
 
-.news__left-arrow,
-.news__chart-icon,
-.news__home-icon {
-	background-color: white;
-	border: 1px solid #405059;
-	border-radius: 10px;
-	-webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	margin: 0.5em;
-	padding: 0.25em;
-	transition: background-color 0.5s;
-	position: fixed;
-	width: 50px;
+.news__icon-container--left {
+	margin-left: 2.5%;
 }
 
-.news__left-arrow {
-	left: 0;
+.news__icon-container--right {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 2.5%;
+	width: 20%;
 }
 
-.news__chart-icon,
-.news__home-icon {
-	right: 0;
+.news__header-container-center {
+	color: rgb(82, 105, 117);
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.news__question-mark {
-	border-radius: 5px;
-	background-color: white;
-	-webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	margin: 0.5em;
-	width: 25px;
+.news__header-text {
+	color: white;
+}
+
+.news__crypto-logo-name-container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.news__ticker-image {
+	align-self: center;
+	margin-right: 0.5em;
+	width: 40px;
 }
 
 .news__x {
 	width: 25px;
 }
 
-.news__web-search-icon {
-	background-color: white;
-	border: 1px solid #405059;
-	border-radius: 10px;
-	-webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	padding: 0.25em;
-	transition: background-color 0.5s;
-	width: 80px;
-}
-
-.news__left-arrow:hover,
-.news__chart-icon:hover,
-.news__home-icon:hover,
-.news__web-search-icon:hover {
-	background-color: rgba(255, 255, 255, 0.7);
-}
-
-.news__question-mark:hover,
 .news__x:hover {
 	cursor: pointer;
 }
 
-.news__left-arrow:active,
-.news__chart-icon:active,
-.news__home-icon:active,
-.news__question-mark:active,
-.news__web-search-icon:active {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-}
-
 .news__reddit-container {
-	background: #536976;
 }
 
 .news__reddit-list {
@@ -329,8 +305,10 @@ CryptoNews
 	flex-wrap: wrap;
 	justify-content: space-around;
 	list-style-type: none;
-	margin: 0em 3em 0em 3em;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 0;
+	width: 95%;
 }
 
 .news__reddit-item {
