@@ -57,7 +57,7 @@ class CryptoNews extends Component {
 
 		return (
 			<div>
-				<h1>CRYPTO HITTERS</h1>
+				<h1 className="news__app-name">CRYPTO HITTERS</h1>
 				<section className="news__header-section">
 					<div className="news__icon-container--left">
 						<Link to="/">

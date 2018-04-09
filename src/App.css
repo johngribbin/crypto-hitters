@@ -23,7 +23,7 @@ HeaderBar
 	background-color: rgb(34, 44, 49);
 	display: flex;
 	justify-content: space-between;
-	padding: 2em 2.5% 0% 2.5%;
+	padding: 2em 5% 0% 5%;
 }
 
 .header-bar__app-title {
@@ -135,7 +135,7 @@ SearchBar
 .search-bar__container {
 	margin-bottom: 2em;
 	text-align: right;
-	margin: 1em 2.5% 2em 0;
+	margin: 1em 5% 2em 0;
 }
 
 .search-bar__input {
@@ -176,7 +176,7 @@ CryptoTable & CryptoRows
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 1em;
-	width: 95%;
+	width: 90%;
 }
 
 .crypto-table__header-text {
@@ -246,6 +246,12 @@ CryptoNews
 .news__container {
 }
 
+.news__app-name {
+	color: white;
+	margin-left: 5%;
+	margin-top: 1em;
+}
+
 .news__header-section {
 	align-items: center;
 	background-color: rgb(42, 54, 59);
@@ -257,36 +263,36 @@ CryptoNews
 }
 
 .news__icon-container--left {
-	margin-left: 2.5%;
-}
-
-.news__icon-container--right {
-	display: flex;
-	justify-content: space-between;
-	margin-right: 2.5%;
-	width: 6em;
+	margin-left: 5%;
 }
 
 .news__header-container-center {
 	color: rgb(82, 105, 117);
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.news__header-text {
-	color: white;
+	margin: 0 auto 0 auto;
 }
 
 .news__crypto-logo-name-container {
 	align-items: center;
 	display: flex;
 	justify-content: center;
+	margin-bottom: 0.5em;
 }
 
 .news__ticker-image {
 	align-self: center;
-	margin-right: 0.5em;
+	margin-right: 1em;
 	width: 40px;
+}
+
+.news__header-text {
+	color: white;
+}
+
+.news__icon-container--right {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 5%;
+	width: 8em;
 }
 
 .news__x {
@@ -313,18 +319,29 @@ CryptoNews
 
 .news__reddit-item {
 	margin: 0.5em;
-	width: 150px;
+	width: 350px;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 }
 
 .news__reddit-item-content {
-	background: white;
-	border: 1px solid black;
-	box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-	-webkit-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+	background: rgb(42, 54, 59);
+	border: 1px solid rgb(133, 146, 151);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	height: 260px;
+}
+
+.news__reddit-item-content--top {
+	padding: 0.5em;
+}
+
+.news__reddit-item-content--bottom {
+	display: flex;
+	border-top: 1px solid rgb(133, 146, 151);
+	justify-content: space-between;
 	padding: 0.5em;
 }
 
