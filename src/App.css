@@ -264,7 +264,7 @@ CryptoNews
 	display: flex;
 	justify-content: space-between;
 	margin-right: 2.5%;
-	width: 20%;
+	width: 6em;
 }
 
 .news__header-container-center {
