@@ -38,7 +38,7 @@ class CryptoChart extends Component {
 				<h1 className="news__app-name">CRYPTO HITTERS</h1>
 				<section className="news__header-section">
 					<div className="news__icon-container--left">
-						<Link to="/">
+						<Link to="/news">
 							<i class="material-icons md-48 float-left">keyboard_arrow_left</i>
 						</Link>
 					</div>
@@ -52,32 +52,16 @@ class CryptoChart extends Component {
 							/>
 							<h1 className="news__header-text">{this.props.chosenCryptoName}</h1>
 						</div>
-						REDDIT COMMUNITY RESULTS
+						SIXTY DAY PRICE ACTION
 					</div>
 
-					<div className="news__icon-container--right">
-						<a
-							href={`https://duckduckgo.com/?q=${
-								this.props.chosenCryptoName
-							}+cryptocurrency+news&t=hb&atb=v109-3&df=d&ia=web`}
-							target="_blank"
-						>
-							<i class="material-icons md-36">language</i>
-						</a>
-						<Link to="/chart">
-							<i class="material-icons md-36">show_chart</i>
+					<div className="chart__home-icon-container">
+						<Link to="/">
+							<i class="material-icons md-48">home</i>
 						</Link>
-						<i class="material-icons md-36" onClick={this.handleOpenModal}>
-							help
-						</i>
 					</div>
 				</section>
-				<Link to="/news">
-					<i class="material-icons md-36 float-left">keyboard_arrow_left</i>
-				</Link>
-				<Link to="/">
-					<i class="material-icons float-right">home</i>
-				</Link>
+
 				<div className="chart__chart">
 					<Bar
 						data={{

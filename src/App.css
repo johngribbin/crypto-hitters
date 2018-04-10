@@ -405,20 +405,19 @@ Modal
 /* --------------------
 CryptoChart
 -------------------- */
+.chart__home-icon-container {
+	margin-right: 5%;
+}
+
 .chart__container {
-	border: 3px solid black;
-	background: #536976;
 	position: relative;
 }
 
 .chart__chart {
 	background: white;
-	border: 1px solid black;
-	box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-	-webkit-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+	border: 1px solid rgb(133, 146, 151);
 	height: 90vh;
-	margin: 4em 0.5em 0.5em 0.5em;
+	margin: 3em 0.5em 0.5em 0.5em;
 }
 
 /* --------------------
