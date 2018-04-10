@@ -35,6 +35,43 @@ class CryptoChart extends Component {
 	render() {
 		return (
 			<div className="chart__container">
+				<h1 className="news__app-name">CRYPTO HITTERS</h1>
+				<section className="news__header-section">
+					<div className="news__icon-container--left">
+						<Link to="/">
+							<i class="material-icons md-48 float-left">keyboard_arrow_left</i>
+						</Link>
+					</div>
+
+					<div className="news__header-container-center">
+						<div className="news__crypto-logo-name-container">
+							<img
+								className="news__ticker-image"
+								src={`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/color/${this.props.chosenCryptoSymbol.toLowerCase()}.png`}
+								alt={this.props.chosenCryptoSymbol}
+							/>
+							<h1 className="news__header-text">{this.props.chosenCryptoName}</h1>
+						</div>
+						REDDIT COMMUNITY RESULTS
+					</div>
+
+					<div className="news__icon-container--right">
+						<a
+							href={`https://duckduckgo.com/?q=${
+								this.props.chosenCryptoName
+							}+cryptocurrency+news&t=hb&atb=v109-3&df=d&ia=web`}
+							target="_blank"
+						>
+							<i class="material-icons md-36">language</i>
+						</a>
+						<Link to="/chart">
+							<i class="material-icons md-36">show_chart</i>
+						</Link>
+						<i class="material-icons md-36" onClick={this.handleOpenModal}>
+							help
+						</i>
+					</div>
+				</section>
 				<Link to="/news">
 					<i class="material-icons md-36 float-left">keyboard_arrow_left</i>
 				</Link>
