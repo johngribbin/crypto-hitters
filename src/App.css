@@ -326,12 +326,19 @@ CryptoNews
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 170px;
+	height: 210px;
 }
 
 .news__reddit-item-content--top {
 	display: flex;
 	padding: 1em;
+}
+
+.news__reddit-item-thumbnail {
+	margin-right: 0.5em;
+	object-fit: cover;
+	width: 100px;
+	height: 100px;
 }
 
 .news__reddit-item-content--bottom {
@@ -343,32 +350,55 @@ CryptoNews
 	padding: 0.5em;
 }
 
-.news__reddit-item-thumbnail {
-	margin-right: 0.5em;
-	width: 100px;
+.news__reddit-comments-container {
+	align-items: center;
+	display: flex;
+}
+
+.news__reddit-links-container {
+	display: flex;
 }
 
 .news__reddit-item-link {
+	align-items: center;
 	color: rgb(133, 146, 151);
-	margin-right: 0.5em;
+	display: flex;
+	margin-left: 0.5em;
+	text-decoration: none;
 }
 
 /* --------------------
 Modal 
 -------------------- */
 .modal__container {
-	background-color: #2c373d;
+	background: rgb(42, 54, 59);
 	border-radius: 10px;
+	padding: 1em;
+}
+
+.modal__content-container {
+	border: 1px solid rgb(133, 146, 151);
 	color: white;
 	display: flex;
 	flex-direction: column;
-	margin-top: 2em;
 	padding: 1em;
 }
 
 .modal__heading,
-.modal__paragraph {
+.modal__paragraph,
+.modal__list {
 	align-self: center;
+}
+
+.modal__heading {
+	margin-bottom: 1em;
+}
+
+.modal__list {
+	margin-top: 1em;
+}
+
+.modal__list-item {
 	margin: 0.5em;
 }
 
@@ -378,7 +408,6 @@ CryptoChart
 .chart__container {
 	border: 3px solid black;
 	background: #536976;
-	//height: 100vh;
 	position: relative;
 }
 

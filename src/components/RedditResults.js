@@ -18,6 +18,7 @@ class RedditResults extends Component {
 								alt="Reddit Thumbnail"
 							/>
 						</a>
+
 						<p>
 							{result.data.title.length > 100
 								? `${result.data.title.substring(0, 100)}...`
@@ -25,9 +26,11 @@ class RedditResults extends Component {
 						</p>
 					</div>
 					<div className="news__reddit-item-content--bottom small-text">
-						<i class="material-icons">forum</i>
-						<p>{result.data.num_comments} COMMENTS</p>
-						<div>
+						<div className="news__reddit-comments-container">
+							<i class="material-icons">forum</i>
+							<p>{result.data.num_comments} COMMENTS</p>
+						</div>
+						<div className="news__reddit-links-container">
 							<a className="news__reddit-item-link" href={result.data.url} target="_blank">
 								<i class="material-icons">link</i>LINK
 							</a>

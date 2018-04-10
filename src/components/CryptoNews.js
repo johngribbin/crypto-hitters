@@ -100,24 +100,26 @@ class CryptoNews extends Component {
 						close
 					</i>
 					<div className="modal__container">
-						<h2 className="modal__heading">Reddit Community Results</h2>
-						<p className="modal__paragraph">
-							This page aims to bring together the most relevant Reddit posts for the crypto asset chosen.
-						</p>
-						<ul className="modal__list">
-							<li>Posts with more comments are given priority.</li>
-							<li>
-								Green colored SubReddit links signify a greater chance of a relevant post and will
-								always appear first.
-							</li>
-							<li>
-								Use the chart icon at top right of the page to view the previous 60 day price action.
-							</li>
-							<li>
-								If posts displayed are not satisfactory, please make use of the web search (by
-								DuckDuckGo) shortcut at the bottom of the page.
-							</li>
-						</ul>
+						<div className="modal__content-container">
+							<h2 className="modal__heading">REDDIT COMMUNITY RESULTS</h2>
+							<p className="modal__paragraph">
+								This page aims to bring you the most relevant Reddit posts for the crypto asset chosen.
+							</p>
+							<ul className="modal__list">
+								<li className="modal__list-item">Posts with more comments are given priority.</li>
+								<li className="modal__list-item">
+									Green colored SubReddit links signify a greater chance of a relevant post and will
+									always appear first.
+								</li>
+								<li className="modal__list-item">
+									Click the chart icon to view the previous 60 days price action.
+								</li>
+								<li className="modal__list-item">
+									If reddit posts are not satisfactory, click the globe icon to launch a web search by
+									DuckDuckGo.
+								</li>
+							</ul>
+						</div>
 					</div>
 				</ReactModal>
 				<div className="news__reddit-container">
