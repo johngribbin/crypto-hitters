@@ -481,8 +481,20 @@ MEDIA QUERIES
 
 /* cell phones */
 @media (max-width: 400px) {
+	.crypto-table__container,
+	.crypto-table__table,
+	.crypto-table__header-row,
+	.crypto-table__table-header-data,
+	.crypto-table__header-text {
+		font-size: 0.9em;
+	}
+
 	.hide-on-phone {
 		display: none;
+	}
+
+	.header-bar__app-title {
+		margin-bottom: 0.5em;
 	}
 
 	.bm-burger-button {
@@ -498,11 +510,10 @@ MEDIA QUERIES
 	}
 
 	.crypto-table__table-row-data {
-		height: 80px;
-		padding: 0.25em;
+		height: 60px;
 	}
 
 	.crypto-rows__crypto-name-data-content {
-		margin-left: 5%;
+		margin-left: 15%;
 	}
 }
