@@ -34,7 +34,7 @@ class CryptoChart extends Component {
 
 	render() {
 		return (
-			<div className="chart__container">
+			<div>
 				<h1 className="news__app-name">CRYPTO HITTERS</h1>
 				<section className="news__header-section">
 					<div className="news__icon-container--left">
@@ -129,10 +129,10 @@ class CryptoChart extends Component {
 							],
 							datasets: [
 								{
-									backgroundColor: '#536976',
+									backgroundColor: 'rgb(42, 54, 59)',
 									data: this.state.chartData,
-									fontColor: 'black',
-									fontFamily: 'Inconsolata',
+									fontColor: 'rgb(133, 146, 151)',
+									fontFamily: 'Source Code Pro',
 									label: 'Price (USD)'
 								}
 							]
@@ -149,7 +149,7 @@ class CryptoChart extends Component {
 							title: {
 								display: true,
 								fontColor: 'black',
-								fontFamily: 'Inconsolata',
+								fontFamily: 'Source Code Pro',
 								text: `60 Day Price Action of ${this.props.chosenCryptoName}`
 							},
 							scales: {
@@ -158,7 +158,7 @@ class CryptoChart extends Component {
 										scaleLabel: {
 											display: true,
 											fontColor: 'black',
-											fontFamily: 'Inconsolata',
+											fontFamily: 'Source Code Pro',
 											labelString: 'Closing Price (USD)'
 										}
 									}
@@ -168,7 +168,7 @@ class CryptoChart extends Component {
 										scaleLabel: {
 											display: true,
 											fontColor: 'black',
-											fontFamily: 'Inconsolata',
+											fontFamily: 'Source Code Pro',
 											labelString: 'Previous 60 days'
 										}
 									}

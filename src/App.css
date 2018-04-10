@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
-@import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 * {
-	font-family: 'Inconsolata', monospace;
+	font-family: 'Source Code Pro', monospace;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -65,14 +64,12 @@ Contact Modal
 }
 
 .contact-modal__email-link {
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 1em;
+	margin: 1em auto 0 auto;
 	color: white;
 }
 
 .contact-modal__icon {
-	margin: 1em;
+	margin: 0 0.5em 0 0.5em;
 	width: 50px;
 }
 
@@ -371,12 +368,13 @@ CryptoNews
 Modal 
 -------------------- */
 .modal__container {
-	background: rgb(42, 54, 59);
+	background-color: rgb(29, 33, 36);
 	border-radius: 10px;
 	padding: 1em;
 }
 
 .modal__content-container {
+	background: rgb(42, 54, 59);
 	border: 1px solid rgb(133, 146, 151);
 	color: white;
 	display: flex;
@@ -409,15 +407,12 @@ CryptoChart
 	margin-right: 5%;
 }
 
-.chart__container {
-	position: relative;
-}
-
 .chart__chart {
-	background: white;
+	background: rgb(186, 201, 208);
 	border: 1px solid rgb(133, 146, 151);
 	height: 90vh;
-	margin: 3em 0.5em 0.5em 0.5em;
+	margin: 3em auto 0 auto;
+	width: 90%;
 }
 
 /* --------------------

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
-import x from '../image/x.png';
 import linkedin from '../image/linkedin.png';
 import github from '../image/github.png';
 
