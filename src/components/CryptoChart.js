@@ -35,11 +35,11 @@ class CryptoChart extends Component {
 	render() {
 		return (
 			<div>
-				<h1 className="news__app-name">CRYPTO HITTERS</h1>
+				<h1 className="news__app-title">CRYPTO HITTERS</h1>
 				<section className="news__header-section">
 					<div className="news__icon-container--left">
 						<Link to="/news">
-							<i class="material-icons md-48 float-left">keyboard_arrow_left</i>
+							<i className="material-icons md-48 float-left">keyboard_arrow_left</i>
 						</Link>
 					</div>
 
@@ -57,7 +57,7 @@ class CryptoChart extends Component {
 
 					<div className="chart__home-icon-container">
 						<Link to="/">
-							<i class="material-icons md-48">home</i>
+							<i className="material-icons md-48">home</i>
 						</Link>
 					</div>
 				</section>

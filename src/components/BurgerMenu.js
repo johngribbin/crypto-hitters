@@ -7,12 +7,12 @@ class BurgerMenu extends Component {
 	render() {
 		return (
 			<Menu right>
-				<div>
+				<div className="burger-menu__text-container">
 					<p>
 						This site was created to present price fluctuations of crypto assets and the news/gossip that
 						may have caused them. Crypto Hitters could not have been made without resources provided by{' '}
 						<a
-							className="white-text"
+							className="burger-menu__link"
 							target="_blank"
 							rel="noopener noreferrer"
 							href="https://coinmarketcap.com/"
@@ -21,7 +21,7 @@ class BurgerMenu extends Component {
 						</a>
 						{', '}
 						<a
-							className="white-text"
+							className="burger-menu__link"
 							target="_blank"
 							rel="noopener noreferrer"
 							href="https://www.reddit.com/"
@@ -30,7 +30,7 @@ class BurgerMenu extends Component {
 						</a>
 						{` and `}
 						<a
-							className="white-text"
+							className="burger-menu__link"
 							target="_blank"
 							rel="noopener noreferrer"
 							href="https://www.cryptocompare.com/"
@@ -41,7 +41,7 @@ class BurgerMenu extends Component {
 						<br />
 						Crypto Hitters is open source and hosted on {''}
 						<a
-							className="white-text"
+							className="burger-menu__link"
 							target="_blank"
 							rel="noopener noreferrer"
 							href="https://github.com/johngribbin/crypto-hitters"
@@ -56,17 +56,20 @@ class BurgerMenu extends Component {
 					</p>
 				</div>
 
-				<div className="contact-modal__icon-container">
-					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/john-gribbin/">
-						<img className="contact-modal__icon" src={linkedin} alt="linkedin logo" />
-					</a>
-					<a target="_blank" rel="noopener noreferrer" href="https://github.com/johngribbin">
-						<img className="contact-modal__icon" src={github} alt="github logo" />
+				<div className="burger-menu__contact-container">
+					<div className="burger-menu__icon-container">
+						<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/john-gribbin/">
+							<img className="contact-modal__icon" src={linkedin} alt="linkedin logo" />
+						</a>
+						<a target="_blank" rel="noopener noreferrer" href="https://github.com/johngribbin">
+							<img className="contact-modal__icon" src={github} alt="github logo" />
+						</a>
+					</div>
+
+					<a className="burger-menu__link" href="mailto:johnggribbin@gmail.com">
+						johnggribbin@gmail.com
 					</a>
 				</div>
-				<a className="contact-modal__email-link" href="mailto:johnggribbin@gmail.com">
-					johnggribbin@gmail.com
-				</a>
 			</Menu>
 		);
 	}

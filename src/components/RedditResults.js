@@ -27,12 +27,12 @@ class RedditResults extends Component {
 					</div>
 					<div className="news__reddit-item-content--bottom small-text">
 						<div className="news__reddit-comments-container">
-							<i class="material-icons">forum</i>
+							<i className="material-icons">forum</i>
 							<p>{result.data.num_comments} COMMENTS</p>
 						</div>
 						<div className="news__reddit-links-container">
 							<a className="news__reddit-item-link" href={result.data.url} target="_blank">
-								<i class="material-icons">link</i>LINK
+								<i className="material-icons">link</i>LINK
 							</a>
 							<a
 								className={
@@ -45,7 +45,7 @@ class RedditResults extends Component {
 								target="_blank"
 								name={result.data.subreddit}
 							>
-								<i class="material-icons">open_in_new</i>SUBREDDIT
+								<i className="material-icons">open_in_new</i>SUBREDDIT
 							</a>
 						</div>
 					</div>

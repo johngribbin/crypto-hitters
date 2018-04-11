@@ -32,6 +32,9 @@ HeaderBar
 	width: 7em;
 }
 
+/* --------------------
+MATERIAL ICONS
+-------------------- */
 .material-icons {
 	color: rgb(186, 201, 208);
 }
@@ -53,6 +56,42 @@ HeaderBar
 .material-icons:hover {
 	color: white;
 	cursor: pointer;
+}
+
+/* --------------------
+Modal 
+-------------------- */
+.modal__container {
+	background-color: rgb(29, 33, 36);
+	border-radius: 10px;
+	padding: 1em;
+}
+
+.modal__content-container {
+	background: rgb(42, 54, 59);
+	border: 1px solid rgb(133, 146, 151);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+}
+
+.modal__heading,
+.modal__paragraph,
+.modal__list {
+	align-self: center;
+}
+
+.modal__heading {
+	margin-bottom: 1em;
+}
+
+.modal__list {
+	margin-top: 1em;
+}
+
+.modal__list-item {
+	margin: 0.5em;
 }
 
 /* --------------------
@@ -93,9 +132,6 @@ BurgerMenu
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-	height: 30px;
-	margin-right: 1em;
-	width: 30px;
 }
 
 /* Color/shape of close button cross */
@@ -108,8 +144,8 @@ BurgerMenu
 	border: 1px solid #405059;
 	border-right: 0;
 	border-top: 0;
-	background: #536976;
-	padding: 1em 1.5em 0;
+	background-color: rgb(34, 44, 49);
+	padding: 0.5em 0.5em 0;
 }
 
 /* Wrapper for item list */
@@ -120,6 +156,30 @@ BurgerMenu
 /* Styling of overlay */
 .bm-overlay {
 	background: rgba(0, 0, 0, 0.3);
+}
+
+.burger-menu__text-container {
+	background: rgb(42, 54, 59);
+	border: 1px solid rgb(133, 146, 151);
+	padding: 1em;
+}
+
+.burger-menu__link {
+	color: white;
+}
+
+.burger-menu__contact-container {
+	background: rgb(42, 54, 59);
+	border: 1px solid rgb(133, 146, 151);
+	border-top: none;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	text-align: center;
+}
+
+.burger-menu__icon-container {
+	margin-bottom: 1em;
 }
 
 /* --------------------
@@ -138,7 +198,7 @@ SearchBar
 	font-size: 1.1em;
 	padding: 0.5em;
 	margin: 0.5em 0em 0.5em 0.5em;
-	width: 15em;
+	width: 17em;
 }
 
 .search-bar__input::placeholder {
@@ -146,22 +206,8 @@ SearchBar
 }
 
 /* --------------------
-CryptoTable & CryptoRows
+CryptoTable
 -------------------- */
-.crypto-rows__ticker-image {
-	align-self: center;
-	-webkit-transition: -webkit-transform 0.8s;
-	-ms-transition: -ms-transform 0.8s;
-	margin: 0em 1em 0em 0em;
-	transition: transform 0.8s;
-	width: 40px;
-}
-
-.sorting-arrow {
-	color: rgb(82, 105, 117);
-	margin-bottom: 1em;
-}
-
 .crypto-table__table {
 	background: #2c373d;
 	border: 3px solid #2c373d;
@@ -170,6 +216,11 @@ CryptoTable & CryptoRows
 	margin-right: auto;
 	padding-top: 1em;
 	width: 90%;
+}
+
+.crypto-table__sorting-arrows {
+	color: rgb(82, 105, 117);
+	margin-bottom: 1em;
 }
 
 .crypto-table__header-text {
@@ -200,6 +251,18 @@ CryptoTable & CryptoRows
 
 .crypto-table__table-row-data {
 	padding: 0.5em;
+}
+
+/* --------------------
+CryptoRows
+-------------------- */
+.crypto-rows__ticker-image {
+	align-self: center;
+	-webkit-transition: -webkit-transform 0.8s;
+	-ms-transition: -ms-transform 0.8s;
+	margin: 0em 1em 0em 0em;
+	transition: transform 0.8s;
+	width: 40px;
 }
 
 .crypto-rows__crypto-name-data-content {
@@ -236,10 +299,7 @@ FooterBar
 /* --------------------
 CryptoNews
 -------------------- */
-.news__container {
-}
-
-.news__app-name {
+.news__app-title {
 	color: white;
 	margin-left: 5%;
 	margin-top: 1em;
@@ -296,9 +356,6 @@ CryptoNews
 	cursor: pointer;
 }
 
-.news__reddit-container {
-}
-
 .news__reddit-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -311,7 +368,6 @@ CryptoNews
 
 .news__reddit-item {
 	margin: 1em;
-	width: 300px;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -323,7 +379,8 @@ CryptoNews
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 210px;
+	height: 250px;
+	width: 300px;
 }
 
 .news__reddit-item-content--top {
@@ -362,42 +419,6 @@ CryptoNews
 	display: flex;
 	margin-left: 0.5em;
 	text-decoration: none;
-}
-
-/* --------------------
-Modal 
--------------------- */
-.modal__container {
-	background-color: rgb(29, 33, 36);
-	border-radius: 10px;
-	padding: 1em;
-}
-
-.modal__content-container {
-	background: rgb(42, 54, 59);
-	border: 1px solid rgb(133, 146, 151);
-	color: white;
-	display: flex;
-	flex-direction: column;
-	padding: 1em;
-}
-
-.modal__heading,
-.modal__paragraph,
-.modal__list {
-	align-self: center;
-}
-
-.modal__heading {
-	margin-bottom: 1em;
-}
-
-.modal__list {
-	margin-top: 1em;
-}
-
-.modal__list-item {
-	margin: 0.5em;
 }
 
 /* --------------------
@@ -474,13 +495,31 @@ MEDIA QUERIES
 		display: none;
 	}
 
-	.news__reddit-item {
-		width: 250px;
+	.news__reddit-item-content {
+		height: 175px;
+		width: 400px;
 	}
 }
 
 /* cell phones */
 @media (max-width: 400px) {
+	.hide-on-phone {
+		display: none;
+	}
+
+	.header-bar__container {
+		padding: 1em 5% 0% 5%;
+	}
+
+	.header-bar__app-title {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+	}
+
+	.bm-burger-button {
+		display: block;
+	}
+
 	.crypto-table__container,
 	.crypto-table__table,
 	.crypto-table__header-row,
@@ -489,31 +528,37 @@ MEDIA QUERIES
 		font-size: 0.9em;
 	}
 
-	.hide-on-phone {
-		display: none;
-	}
-
-	.header-bar__app-title {
-		margin-bottom: 0.5em;
-	}
-
-	.bm-burger-button {
-		display: block;
-	}
-
-	.news__reddit-item {
-		width: 250px;
-	}
-
 	.crypto-table__table {
 		width: 100%;
 	}
 
+	.crypto-table__sorting-arrows {
+		margin-bottom: 0.5em;
+	}
+
 	.crypto-table__table-row-data {
-		height: 60px;
+		height: 70px;
 	}
 
 	.crypto-rows__crypto-name-data-content {
 		margin-left: 15%;
+	}
+
+	.news__app-title {
+		font-size: 1.5em;
+		margin-top: 0.5em;
+	}
+
+	.news__icon-container--right {
+		width: auto;
+	}
+
+	.news__reddit-item {
+		margin: 0.5em;
+	}
+
+	.news__reddit-item-content {
+		height: 230px;
+		width: 300px;
 	}
 }

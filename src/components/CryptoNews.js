@@ -57,11 +57,11 @@ class CryptoNews extends Component {
 
 		return (
 			<div>
-				<h1 className="news__app-name">CRYPTO HITTERS</h1>
+				<h1 className="news__app-title">CRYPTO HITTERS</h1>
 				<section className="news__header-section">
 					<div className="news__icon-container--left">
 						<Link to="/">
-							<i class="material-icons md-48 float-left">keyboard_arrow_left</i>
+							<i className="material-icons md-48 float-left">keyboard_arrow_left</i>
 						</Link>
 					</div>
 
@@ -84,19 +84,23 @@ class CryptoNews extends Component {
 							}+cryptocurrency+news&t=hb&atb=v109-3&df=d&ia=web`}
 							target="_blank"
 						>
-							<i class="material-icons md-36">language</i>
+							<div className="hide-on-phone">
+								<i className="material-icons md-36">language</i>
+							</div>
 						</a>
 						<Link to="/chart">
-							<i class="material-icons md-36">show_chart</i>
+							<i className="material-icons md-36">show_chart</i>
 						</Link>
-						<i class="material-icons md-36" onClick={this.handleOpenModal}>
-							help
-						</i>
+						<div className="hide-on-phone">
+							<i className="material-icons md-36" onClick={this.handleOpenModal}>
+								help
+							</i>
+						</div>
 					</div>
 				</section>
 
 				<ReactModal isOpen={this.state.showModal} contentLabel="Minimal Modal Example">
-					<i class="material-icons md-36 float-right" onClick={this.handleCloseModal}>
+					<i className="material-icons md-36 float-right" onClick={this.handleCloseModal}>
 						close
 					</i>
 					<div className="modal__container">
@@ -122,14 +126,13 @@ class CryptoNews extends Component {
 						</div>
 					</div>
 				</ReactModal>
-				<div className="news__reddit-container">
-					<ul className="news__reddit-list">
-						<RedditResults
-							redditResults={this.state.redditResults}
-							chosenCryptoName={this.props.chosenCryptoName}
-						/>
-					</ul>
-				</div>
+
+				<ul className="news__reddit-list">
+					<RedditResults
+						redditResults={this.state.redditResults}
+						chosenCryptoName={this.props.chosenCryptoName}
+					/>
+				</ul>
 			</div>
 		);
 	}
