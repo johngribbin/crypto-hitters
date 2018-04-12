@@ -120,8 +120,8 @@ BurgerMenu
 	display: none;
 	height: 30px;
 	position: absolute;
-	right: 20px;
-	top: 20px;
+	right: 1em;
+	top: 1em;
 	width: 36px;
 }
 
@@ -309,8 +309,7 @@ CryptoNews
 	align-items: center;
 	background-color: rgb(42, 54, 59);
 	display: flex;
-	margin-top: 2em;
-	margin-bottom: 2em;
+	margin: 2em 0 2em 0;
 	padding: 1em 0em 1em 0em;
 	width: 100%;
 }
@@ -495,6 +494,10 @@ MEDIA QUERIES
 		display: none;
 	}
 
+	.crypto-rows__crypto-name-data-content {
+		margin-left: 15%;
+	}
+
 	.news__reddit-item-content {
 		height: 175px;
 		width: 400px;
@@ -508,7 +511,7 @@ MEDIA QUERIES
 	}
 
 	.header-bar__container {
-		padding: 1em 5% 0% 5%;
+		padding: 0.75em 5% 0% 5%;
 	}
 
 	.header-bar__app-title {
@@ -541,12 +544,16 @@ MEDIA QUERIES
 	}
 
 	.crypto-rows__crypto-name-data-content {
-		margin-left: 15%;
+		margin-left: auto;
 	}
 
 	.news__app-title {
 		font-size: 1.5em;
 		margin-top: 0.5em;
+	}
+
+	.news__header-section {
+		margin: 1em 0 1em 0;
 	}
 
 	.news__icon-container--right {
@@ -560,5 +567,9 @@ MEDIA QUERIES
 	.news__reddit-item-content {
 		height: 230px;
 		width: 300px;
+	}
+
+	.chart__chart {
+		margin: 1.5em auto 0 auto;
 	}
 }

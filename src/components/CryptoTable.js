@@ -66,113 +66,99 @@ class CryptoTable extends Component {
 					<thead>
 						<tr id="crypto-table__header-row">
 							<td className="crypto-table__table-header-data">
-								<h3>
-									<label className="crypto-table__header-text">
-										RANK
-										<br />
-										<i className="material-icons crypto-table__sorting-arrows rotate-90">
-											compare_arrows
-										</i>
-										<input
-											type="checkbox"
-											className="crypto-table__checkbox"
-											value="rank"
-											onClick={this.sortNumberData}
-										/>
-									</label>
-								</h3>
+								<label className="crypto-table__header-text">
+									RANK
+									<br />
+									<i className="material-icons crypto-table__sorting-arrows rotate-90">
+										compare_arrows
+									</i>
+									<input
+										type="checkbox"
+										className="crypto-table__checkbox"
+										value="rank"
+										onClick={this.sortNumberData}
+									/>
+								</label>
 							</td>
 							<td className="crypto-table__table-header-data">
-								<h3>
-									<label className="crypto-table__header-text">
-										NAME
-										<br />
-										<i className="material-icons crypto-table__sorting-arrows rotate-90">
-											compare_arrows
-										</i>
-										<input
-											type="checkbox"
-											className="crypto-table__checkbox"
-											value="name"
-											onClick={this.sortStringData}
-										/>
-									</label>
-								</h3>
+								<label className="crypto-table__header-text">
+									NAME
+									<br />
+									<i className="material-icons crypto-table__sorting-arrows rotate-90">
+										compare_arrows
+									</i>
+									<input
+										type="checkbox"
+										className="crypto-table__checkbox"
+										value="name"
+										onClick={this.sortStringData}
+									/>
+								</label>
 							</td>
 							<td className="crypto-table__table-header-data hide-on-ipad">
-								<h3>
-									<label className="crypto-table__header-text">
-										SYMBOL
-										<br />
-										<i className="material-icons crypto-table__sorting-arrows rotate-90">
-											compare_arrows
-										</i>
-										<input
-											type="checkbox"
-											className="crypto-table__checkbox"
-											value="symbol"
-											onClick={this.sortStringData}
-										/>
-									</label>
-								</h3>
+								<label className="crypto-table__header-text">
+									SYMBOL
+									<br />
+									<i className="material-icons crypto-table__sorting-arrows rotate-90">
+										compare_arrows
+									</i>
+									<input
+										type="checkbox"
+										className="crypto-table__checkbox"
+										value="symbol"
+										onClick={this.sortStringData}
+									/>
+								</label>
 							</td>
 							<td className="crypto-table__table-header-data">
-								<h3>
-									<label className="crypto-table__header-text">
-										PRICE
-										<br />
-										<i className="material-icons crypto-table__sorting-arrows rotate-90">
-											compare_arrows
-										</i>
-										<input
-											type="checkbox"
-											className="crypto-table__checkbox"
-											value="price_usd"
-											onClick={this.sortNumberData}
-										/>
-									</label>
-								</h3>
+								<label className="crypto-table__header-text">
+									PRICE
+									<br />
+									<i className="material-icons crypto-table__sorting-arrows rotate-90">
+										compare_arrows
+									</i>
+									<input
+										type="checkbox"
+										className="crypto-table__checkbox"
+										value="price_usd"
+										onClick={this.sortNumberData}
+									/>
+								</label>
 							</td>
 							<td className="crypto-table__table-header-data hide-on-tablet">
-								<h3>
-									<label className="crypto-table__header-text">
-										MARKET CAP
-										<br />
-										<i className="material-icons crypto-table__sorting-arrows rotate-90">
-											compare_arrows
-										</i>
-										<input
-											type="checkbox"
-											className="crypto-table__checkbox"
-											value="market_cap_usd"
-											onClick={this.sortNumberData}
-										/>
-									</label>
-								</h3>
-							</td>
-							<td className="crypto-table__table-header-data">
-								<h3>
-									<label className="crypto-table__header-text">
-										CHANGE (24HR)
-										<br />
-										<i className="material-icons crypto-table__sorting-arrows rotate-90">
-											compare_arrows
-										</i>
-										<input
-											type="checkbox"
-											className="crypto-table__checkbox"
-											value="percent_change_24h"
-											onClick={this.sortNumberData}
-										/>
-									</label>
-								</h3>
-							</td>
-							<td className="crypto-table__table-header-data">
-								<h3>
-									<label className="crypto-table__header-text">NEWS</label>
+								<label className="crypto-table__header-text">
+									MARKET CAP
 									<br />
-									<i className="material-icons rotate-90 opaque">compare_arrows</i>
-								</h3>
+									<i className="material-icons crypto-table__sorting-arrows rotate-90">
+										compare_arrows
+									</i>
+									<input
+										type="checkbox"
+										className="crypto-table__checkbox"
+										value="market_cap_usd"
+										onClick={this.sortNumberData}
+									/>
+								</label>
+							</td>
+							<td className="crypto-table__table-header-data">
+								<label className="crypto-table__header-text">
+									CHANGE (24HR)
+									<br />
+									<i className="material-icons crypto-table__sorting-arrows rotate-90">
+										compare_arrows
+									</i>
+									<input
+										type="checkbox"
+										className="crypto-table__checkbox"
+										value="percent_change_24h"
+										onClick={this.sortNumberData}
+									/>
+								</label>
+							</td>
+							<td className="crypto-table__table-header-data">
+								<label className="crypto-table__header-text">NEWS</label>
+								<br />
+								<i className="material-icons rotate-90 opaque">compare_arrows</i>
 							</td>
 						</tr>
 					</thead>
