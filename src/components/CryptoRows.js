@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ArrowRight from '../image/arrow-right-1x.png';
+import ArrowRight1x from '../image/arrow-right-1x.png';
 import PropTypes from 'prop-types';
 
 class CryptoRows extends Component {
@@ -72,7 +72,7 @@ class CryptoRows extends Component {
 				<td>
 					<Link to="/news">
 						<img
-							src={ArrowRight}
+							src={ArrowRight1x}
 							alt="right arrow"
 							name={ticker.name}
 							id={ticker.symbol}
