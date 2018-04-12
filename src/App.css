@@ -141,10 +141,10 @@ BurgerMenu
 
 /* General sidebar styles */
 .bm-menu {
+	background-color: rgb(34, 44, 49);
 	border: 1px solid #405059;
 	border-right: 0;
 	border-top: 0;
-	background-color: rgb(34, 44, 49);
 	padding: 0.5em 0.5em 0;
 }
 
@@ -186,7 +186,6 @@ BurgerMenu
 SearchBar
 -------------------- */
 .search-bar__container {
-	margin-bottom: 2em;
 	text-align: right;
 	margin: 1em 5% 2em 0;
 }
@@ -212,8 +211,7 @@ CryptoTable
 	background: #2c373d;
 	border: 3px solid #2c373d;
 	color: rgba(255, 255, 255, 0.8);
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto 0 auto;
 	padding-top: 1em;
 	width: 90%;
 }
