@@ -299,8 +299,7 @@ CryptoNews
 -------------------- */
 .news__app-title {
 	color: white;
-	margin-left: 5%;
-	margin-top: 1em;
+	margin: 1em 0 0 5%;
 }
 
 .news__header-section {
@@ -345,12 +344,15 @@ CryptoNews
 	width: 8em;
 }
 
-.news__x {
-	width: 25px;
+.news__phone-help-icon {
+	display: none;
+	position: absolute;
+	right: 1em;
+	top: 0.75em;
 }
 
-.news__x:hover {
-	cursor: pointer;
+.modal__globe-icon-list-item {
+	display: none;
 }
 
 .news__reddit-list {
@@ -358,8 +360,7 @@ CryptoNews
 	flex-wrap: wrap;
 	justify-content: space-around;
 	list-style-type: none;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto 0 auto;
 	width: 90%;
 }
 
@@ -548,6 +549,16 @@ MEDIA QUERIES
 	.news__app-title {
 		font-size: 1.5em;
 		margin-top: 0.5em;
+	}
+
+	/* help icon moves to top right of the screen on cellphones */
+	.news__phone-help-icon {
+		display: block;
+	}
+
+	/* globe icon is inside the help modal on cellphones */
+	.modal__globe-icon-list-item {
+		display: block;
 	}
 
 	.news__header-section {

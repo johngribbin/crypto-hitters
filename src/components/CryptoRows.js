@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ArrowRight from '../image/arrow-right.svg';
+import ArrowRight from '../image/arrow-right-1x.png';
 import PropTypes from 'prop-types';
 
 class CryptoRows extends Component {

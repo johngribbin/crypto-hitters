@@ -58,6 +58,12 @@ class CryptoNews extends Component {
 		return (
 			<div>
 				<h1 className="news__app-title">CRYPTO HITTERS</h1>
+				{/* help icon moves to top right on cell phone view */}
+				<div className="news__phone-help-icon">
+					<i className="material-icons md-36" onClick={this.handleOpenModal}>
+						help
+					</i>
+				</div>
 				<section className="news__header-section">
 					<div className="news__icon-container--left">
 						<Link to="/">
@@ -99,6 +105,7 @@ class CryptoNews extends Component {
 					</div>
 				</section>
 
+				{/* this is the 'help' modal content */}
 				<ReactModal isOpen={this.state.showModal} contentLabel="Minimal Modal Example">
 					<i className="material-icons md-36 float-right" onClick={this.handleCloseModal}>
 						close
@@ -121,6 +128,19 @@ class CryptoNews extends Component {
 								<li className="modal__list-item">
 									If reddit posts are not satisfactory, click the globe icon to launch a web search by
 									DuckDuckGo.
+								</li>
+								{/* the globe icon appears inside help modal on cellphone views */}
+								<li className="modal__list-item modal__globe-icon-list-item">
+									<a
+										href={`https://duckduckgo.com/?q=${
+											this.props.chosenCryptoName
+										}+cryptocurrency+news&t=hb&atb=v109-3&df=d&ia=web`}
+										target="_blank"
+									>
+										<div className>
+											<i className="material-icons md-36">language</i>
+										</div>
+									</a>
 								</li>
 							</ul>
 						</div>
