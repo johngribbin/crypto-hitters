@@ -393,6 +393,11 @@ CryptoNews
 	height: 100px;
 }
 
+.news__reddit-item-title-text {
+	color: white;
+	text-decoration: none;
+}
+
 .news__reddit-item-content--bottom {
 	align-items: center;
 	display: flex;

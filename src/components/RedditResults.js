@@ -18,17 +18,18 @@ class RedditResults extends Component {
 								alt="Reddit Thumbnail"
 							/>
 						</a>
-
-						<p>
+						<a className="news__reddit-item-title-text" href={result.data.url} target="_blank">
 							{result.data.title.length > 100
 								? `${result.data.title.substring(0, 100)}...`
 								: result.data.title}
-						</p>
+						</a>
 					</div>
 					<div className="news__reddit-item-content--bottom small-text">
 						<div className="news__reddit-comments-container">
-							<i className="material-icons">forum</i>
-							<p>{result.data.num_comments} COMMENTS</p>
+							<a className="news__reddit-item-link" href={result.data.url} target="_blank">
+								<i className="material-icons">forum</i>
+								{result.data.num_comments} COMMENTS
+							</a>
 						</div>
 						<div className="news__reddit-links-container">
 							<a className="news__reddit-item-link" href={result.data.url} target="_blank">
