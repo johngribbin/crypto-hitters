@@ -1,3 +1,7 @@
+# Crypto Hitters
+
+View the progress of Crypto Hitters here - www.cryptohitters.com
+
 ## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
@@ -17,4 +21,4 @@ API resources provided by [CoinMarketCap](https://coinmarketcap.com/api/), [Redd
 
 ## Special Thanks
 
-To [Sam Chittenden](https://github.com/sbchittenden) for all his invaluable advice.
+To [Sam Chittenden](https://github.com/sbchittenden) for all his invaluable design advice.
