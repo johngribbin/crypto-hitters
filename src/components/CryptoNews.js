@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
 import PropTypes from 'prop-types';
-
 import getRedditResults from '../helpers/getRedditResults';
 import sortBySubreddit from '../helpers/sortBySubreddit';
-
 import RedditResults from './RedditResults';
-
 import { Link } from 'react-router-dom';
 
 class CryptoNews extends Component {
@@ -24,7 +21,7 @@ class CryptoNews extends Component {
 
 	componentDidMount() {
 		getRedditResults(this.props.chosenCryptoName).then(response => {
-			var sortedRedditResults = sortBySubreddit(response.data.data.children, this.props.chosenCryptoName);
+			let sortedRedditResults = sortBySubreddit(response.data.data.children, this.props.chosenCryptoName);
 
 			this.setState({
 				redditResults: sortedRedditResults
@@ -35,7 +32,7 @@ class CryptoNews extends Component {
 	componentWillReceiveProps(nextProps) {
 		if (this.props.chosenCryptoName !== nextProps.chosenCryptoName) {
 			getRedditResults(nextProps.chosenCryptoName).then(response => {
-				var sortedRedditResults = sortBySubreddit(response.data.data.children, this.props.chosenCryptoName);
+				let sortedRedditResults = sortBySubreddit(response.data.data.children, this.props.chosenCryptoName);
 
 				this.setState({
 					redditResults: sortedRedditResults

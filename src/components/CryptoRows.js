@@ -34,7 +34,7 @@ class CryptoRows extends Component {
 
 	render() {
 		const searchTerm = this.props.searchTerm;
-		var tickers;
+		let tickers;
 
 		// render only the tickers with a name or symbol name that match the searchTerm entered into searchBar
 		if (searchTerm !== '') {

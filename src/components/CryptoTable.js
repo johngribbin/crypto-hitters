@@ -26,9 +26,9 @@ class CryptoTable extends Component {
 	}
 
 	sortStringData(event) {
-		var currentTickers = this.state.tickers;
+		const currentTickers = this.state.tickers;
 		const headerName = event.target.value;
-		var sortedTickers;
+		let sortedTickers;
 
 		if (event.target.checked === true) {
 			sortedTickers = currentTickers.sort(sortStringData(headerName));
@@ -43,9 +43,9 @@ class CryptoTable extends Component {
 	}
 
 	sortNumberData(event) {
-		var currentTickers = this.state.tickers;
+		const currentTickers = this.state.tickers;
 		const headerName = event.target.value;
-		var sortedTickers;
+		let sortedTickers;
 
 		if (event.target.checked === true) {
 			sortedTickers = sortNumberData(currentTickers, headerName);
