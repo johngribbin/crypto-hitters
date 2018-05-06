@@ -6,7 +6,7 @@ import github from '../image/github.png';
 class BurgerMenu extends Component {
 	render() {
 		return (
-			<Menu right>
+			<Menu>
 				<div className="burger-menu__text-container">
 					<p>
 						This site was created to present price fluctuations of crypto assets and the news/gossip that

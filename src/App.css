@@ -119,8 +119,8 @@ BurgerMenu
 .bm-burger-button {
 	display: none;
 	height: 30px;
+	left: 1em;
 	position: absolute;
-	right: 1em;
 	top: 1em;
 	width: 36px;
 }
@@ -515,11 +515,13 @@ MEDIA QUERIES
 	}
 
 	.header-bar__container {
+		justify-content: center;
 		padding: 0.75em 5% 0% 5%;
 	}
 
 	.header-bar__app-title {
 		font-size: 1.5em;
+		margin-left: 2em;
 		margin-bottom: 1em;
 	}
 
