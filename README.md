@@ -1,6 +1,6 @@
 # Crypto Hitters
 
-View the progress of Crypto Hitters here - www.cryptohitters.com
+View the progress of Crypto Hitters here - https://cryptohitters.com/
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
