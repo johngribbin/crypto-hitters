@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import getChartData from '../helpers/getChartData';
-import { Bar } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -63,7 +63,7 @@ class CryptoChart extends Component {
 				</section>
 
 				<div className="chart__chart">
-					<Bar
+					<Line
 						data={{
 							labels: [
 								60,
@@ -125,15 +125,20 @@ class CryptoChart extends Component {
 								4,
 								3,
 								2,
-								1
+								1,
+								'NOW'
 							],
 							datasets: [
 								{
-									backgroundColor: 'rgb(42, 54, 59)',
+									backgroundColor: 'rgb(251, 145, 58)',
+									borderColor: 'rgb(251, 145, 58)',
 									data: this.state.chartData,
-									fontColor: 'rgb(133, 146, 151)',
 									fontFamily: 'Source Code Pro',
-									label: 'Price (USD)'
+									fill: false,
+									label: 'Price (USD)',
+									pointBorderColor: 'rgb(29, 33, 36)',
+									pointBackgroundColor: '#fff',
+									pointHoverBackgroundColor: 'rgba(75,192,192,1)'
 								}
 							]
 						}}
@@ -184,7 +189,8 @@ class CryptoChart extends Component {
 
 CryptoChart.propTypes = {
 	chosenCryptoSymbol: PropTypes.string,
-	chosenCryptoName: PropTypes.string
+	chosenCryptoName: PropTypes.string,
+	chosenCryptoPrice: PropTypes.number
 };
 
 export default CryptoChart;

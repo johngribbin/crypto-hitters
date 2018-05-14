@@ -26,10 +26,13 @@ class CryptoRows extends Component {
 		}
 	}
 
-	// send the chosenCryptoName and chosenCryptoSymbol to the application state
+	// send the chosenCryptoName, chosenCryptoSymbol and chosenCryptoPrice to the application state
 	handleChosenCrypto(event) {
 		this.props.handleChosenCryptoName(event.target.name);
 		this.props.handleChosenCryptoSymbol(event.target.id);
+		this.props.handleChosenCryptoPrice(
+			Number(event.target.parentNode.parentNode.parentNode.children[3].textContent.substring(1))
+		);
 	}
 
 	render() {
