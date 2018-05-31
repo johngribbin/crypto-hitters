@@ -6,6 +6,8 @@ Like many people I check the price moves of various Crypto assets every day. Mor
 
 View the progress here - https://cryptohitters.com/
 
+### create-react-app
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 For information on how to perform common tasks, you can find the most recent version of the Create React App guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
