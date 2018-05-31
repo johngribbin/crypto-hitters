@@ -18,14 +18,12 @@ class App extends Component {
 		this.state = {
 			searchTerm: '',
 			chosenCryptoName: 'Bitcoin',
-			chosenCryptoSymbol: 'BTC',
-			chosenCryptoPrice: 0
+			chosenCryptoSymbol: 'BTC'
 		};
 
 		this.handleSearchTerm = this.handleSearchTerm.bind(this);
 		this.handleChosenCryptoName = this.handleChosenCryptoName.bind(this);
 		this.handleChosenCryptoSymbol = this.handleChosenCryptoSymbol.bind(this);
-		this.handleChosenCryptoPrice = this.handleChosenCryptoPrice.bind(this);
 	}
 
 	// the term entered into 'searchBar' component
@@ -33,19 +31,14 @@ class App extends Component {
 		this.setState({ searchTerm: searchTerm });
 	}
 
-	// when 'news' arrow is clicked for a crypto asset, change chosenCryptoName state
+	// when 'news' arrow is clicked for a crypto asset, change 'chosenCryptoName' state
 	handleChosenCryptoName(chosenCryptoName) {
 		this.setState({ chosenCryptoName: chosenCryptoName });
 	}
 
-	// when 'news' arrow is clicked for a crypto asset, change chosenCryptoSymbol state
+	// when 'news' arrow is clicked for a crypto asset, change 'chosenCryptoSymbol' state
 	handleChosenCryptoSymbol(chosenCryptoSymbol) {
 		this.setState({ chosenCryptoSymbol: chosenCryptoSymbol });
-	}
-
-	// when 'news' arrow is clicked for a crypto asset, change chosenCryptoPrice state
-	handleChosenCryptoPrice(chosenCryptoPrice) {
-		this.setState({ chosenCryptoPrice: chosenCryptoPrice });
 	}
 
 	render() {
@@ -69,7 +62,6 @@ class App extends Component {
 									searchTerm={this.state.searchTerm}
 									handleChosenCryptoName={this.handleChosenCryptoName}
 									handleChosenCryptoSymbol={this.handleChosenCryptoSymbol}
-									handleChosenCryptoPrice={this.handleChosenCryptoPrice}
 								/>
 								<FooterBar />
 							</div>

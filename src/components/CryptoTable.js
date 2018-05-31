@@ -169,7 +169,6 @@ class CryptoTable extends Component {
 							searchTerm={this.props.searchTerm}
 							handleChosenCryptoName={this.props.handleChosenCryptoName}
 							handleChosenCryptoSymbol={this.props.handleChosenCryptoSymbol}
-							handleChosenCryptoPrice={this.props.handleChosenCryptoPrice}
 						/>
 					</tbody>
 				</table>
