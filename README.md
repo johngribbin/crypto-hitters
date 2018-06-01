@@ -29,7 +29,7 @@ To [Sam Chittenden](https://github.com/sbchittenden) for all his invaluable desi
 
 ### Contributions
 
-More than welcome! Please feel free to initializing a pull request or reach out to me if you have any tips/suggestions for improving the app.
+More than welcome! Please feel free to initialize a pull request or reach out to me if you have any tips/suggestions for improving the app.
 
 My current to do list includes the following:
 
