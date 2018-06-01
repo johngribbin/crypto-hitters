@@ -31,5 +31,11 @@ To [Sam Chittenden](https://github.com/sbchittenden) for all his invaluable desi
 
 More than welcome! Please feel free to initializing a pull request or reach out to me if you have any tips/suggestions for improving the app.
 
+My current to do list includes the following:
+
+*   testing
+*   taking steps to improve the relevance of the news feed for lesser-known crypto assets
+*   addition of interactive charts
+
 cheers
 John.
