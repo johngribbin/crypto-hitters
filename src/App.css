@@ -11,6 +11,17 @@ body {
 	background: rgb(34, 44, 49);
 }
 
+/* Use a placeholder image when the crypto symbol image isnt found */
+img:before {
+	background-image: url('https://placehold.it/40x40');
+	content: ' ';
+	display: block;
+	height: 40px;
+	position: absolute;
+	width: 40px;
+	z-index: 0;
+}
+
 /* --------------------
 HeaderBar
 -------------------- */
