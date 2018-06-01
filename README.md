@@ -37,5 +37,5 @@ My current to do list includes the following:
 *   taking steps to improve the relevance of the news feed for lesser-known crypto assets
 *   addition of interactive charts
 
-cheers
+cheers,
 John.
