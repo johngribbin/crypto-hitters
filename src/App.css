@@ -11,17 +11,6 @@ body {
 	background: rgb(34, 44, 49);
 }
 
-/* Use a placeholder image when the crypto symbol image isnt found */
-img:before {
-	background-image: url('https://placehold.it/40x40');
-	content: ' ';
-	display: block;
-	height: 40px;
-	position: absolute;
-	width: 40px;
-	z-index: 0;
-}
-
 /* --------------------
 HeaderBar
 -------------------- */
@@ -274,6 +263,17 @@ CryptoRows
 	width: 40px;
 }
 
+/* Use a placeholder image when the crypto symbol image isnt found */
+.crypto-rows__ticker-image:before {
+	background-image: url('https://placehold.it/40x40');
+	content: ' ';
+	display: block;
+	height: 40px;
+	position: absolute;
+	width: 40px;
+	z-index: 0;
+}
+
 .crypto-rows__crypto-name-data-content {
 	align-items: center;
 	display: flex;
@@ -342,6 +342,17 @@ CryptoNews
 	align-self: center;
 	margin-right: 1em;
 	width: 40px;
+}
+
+/* Use a placeholder image when the crypto symbol image isnt found */
+.news__ticker-image:before {
+	background-image: url('https://placehold.it/40x40');
+	content: ' ';
+	display: block;
+	height: 40px;
+	position: absolute;
+	width: 40px;
+	z-index: 0;
 }
 
 .news__header-text {
