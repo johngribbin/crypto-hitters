@@ -4,35 +4,26 @@ import linkedin from '../image/linkedin.png';
 import github from '../image/github.png';
 
 class HeaderBar extends Component {
-	constructor(props) {
-		super(props);
+	state = {
+		showAboutModal: false,
+		showContactModal: false
+	};
 
-		this.state = {
-			showAboutModal: false,
-			showContactModal: false
-		};
-
-		this.handleOpenAboutModal = this.handleOpenAboutModal.bind(this);
-		this.handleCloseAboutModal = this.handleCloseAboutModal.bind(this);
-		this.handleOpenContactModal = this.handleOpenContactModal.bind(this);
-		this.handleCloseContactModal = this.handleCloseContactModal.bind(this);
-	}
-
-	handleOpenAboutModal() {
+	handleOpenAboutModal = () => {
 		this.setState({ showAboutModal: true });
-	}
+	};
 
-	handleCloseAboutModal() {
+	handleCloseAboutModal = () => {
 		this.setState({ showAboutModal: false });
-	}
+	};
 
-	handleOpenContactModal() {
+	handleOpenContactModal = () => {
 		this.setState({ showContactModal: true });
-	}
+	};
 
-	handleCloseContactModal() {
+	handleCloseContactModal = () => {
 		this.setState({ showContactModal: false });
-	}
+	};
 
 	render() {
 		return (

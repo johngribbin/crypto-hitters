@@ -11,35 +11,27 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
-	constructor(props) {
-		super(props);
-
-		// if user visits 'cryptoNews' or 'cryptoChart' pages the default chosen crypto asset is Bitcoin
-		this.state = {
-			searchTerm: '',
-			chosenCryptoName: 'Bitcoin',
-			chosenCryptoSymbol: 'BTC'
-		};
-
-		this.handleSearchTerm = this.handleSearchTerm.bind(this);
-		this.handleChosenCryptoName = this.handleChosenCryptoName.bind(this);
-		this.handleChosenCryptoSymbol = this.handleChosenCryptoSymbol.bind(this);
-	}
+	// if user visits 'cryptoNews' or 'cryptoChart' pages the default chosen crypto asset is Bitcoin
+	state = {
+		searchTerm: '',
+		chosenCryptoName: 'Bitcoin',
+		chosenCryptoSymbol: 'BTC'
+	};
 
 	// the term entered into 'searchBar' component
-	handleSearchTerm(searchTerm) {
+	handleSearchTerm = searchTerm => {
 		this.setState({ searchTerm: searchTerm });
-	}
+	};
 
 	// when 'news' arrow is clicked for a crypto asset, change 'chosenCryptoName' state
-	handleChosenCryptoName(chosenCryptoName) {
+	handleChosenCryptoName = chosenCryptoName => {
 		this.setState({ chosenCryptoName: chosenCryptoName });
-	}
+	};
 
 	// when 'news' arrow is clicked for a crypto asset, change 'chosenCryptoSymbol' state
-	handleChosenCryptoSymbol(chosenCryptoSymbol) {
+	handleChosenCryptoSymbol = chosenCryptoSymbol => {
 		this.setState({ chosenCryptoSymbol: chosenCryptoSymbol });
-	}
+	};
 
 	render() {
 		return (

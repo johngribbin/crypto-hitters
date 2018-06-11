@@ -5,13 +5,9 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class CryptoChart extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			chartData: []
-		};
-	}
+	state = {
+		chartData: []
+	};
 
 	// 'obj.close' is the 'closing price' on the day
 	componentDidMount() {

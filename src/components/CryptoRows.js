@@ -4,15 +4,8 @@ import ArrowRight1x from '../image/arrow-right-1x.png';
 import PropTypes from 'prop-types';
 
 class CryptoRows extends Component {
-	constructor(props) {
-		super(props);
-
-		this.handleArrowHover = this.handleArrowHover.bind(this);
-		this.handleChosenCrypto = this.handleChosenCrypto.bind(this);
-	}
-
 	// spin the crypto symbol, and brighten the text in the row on arrow button hover
-	handleArrowHover(event) {
+	handleArrowHover = event => {
 		const tickerSymbol = event.target.id;
 		const tickerLogo = document.getElementById(`crypto-rows__${tickerSymbol}-image`);
 		const tickerRow = document.getElementById(`crypto-rows__${tickerSymbol}-row`);
@@ -24,13 +17,13 @@ class CryptoRows extends Component {
 			tickerLogo.classList.remove('crypto-rows__logo--spin');
 			tickerRow.classList.remove('crypto-rows__row--light-up');
 		}
-	}
+	};
 
 	// send the chosenCryptoName, chosenCryptoSymbol and chosenCryptoPrice to the application state
-	handleChosenCrypto(event) {
+	handleChosenCrypto = event => {
 		this.props.handleChosenCryptoName(event.target.name);
 		this.props.handleChosenCryptoSymbol(event.target.id);
-	}
+	};
 
 	render() {
 		const searchTerm = this.props.searchTerm;

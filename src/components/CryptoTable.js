@@ -6,16 +6,9 @@ import sortNumberData from '../helpers/sortNumberData';
 import PropTypes from 'prop-types';
 
 class CryptoTable extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			tickers: []
-		};
-
-		this.sortStringData = this.sortStringData.bind(this);
-		this.sortNumberData = this.sortNumberData.bind(this);
-	}
+	state = {
+		tickers: []
+	};
 
 	componentDidMount() {
 		getAllTickers().then(response => {
@@ -25,7 +18,7 @@ class CryptoTable extends Component {
 		});
 	}
 
-	sortStringData(event) {
+	sortStringData = event => {
 		const currentTickers = this.state.tickers;
 		const headerName = event.target.value;
 		let sortedTickers;
@@ -40,9 +33,9 @@ class CryptoTable extends Component {
 		this.setState({
 			tickers: sortedTickers
 		});
-	}
+	};
 
-	sortNumberData(event) {
+	sortNumberData = event => {
 		const currentTickers = this.state.tickers;
 		const headerName = event.target.value;
 		let sortedTickers;
@@ -57,7 +50,7 @@ class CryptoTable extends Component {
 		this.setState({
 			tickers: sortedTickers
 		});
-	}
+	};
 
 	render() {
 		return (

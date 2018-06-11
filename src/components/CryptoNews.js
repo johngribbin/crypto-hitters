@@ -7,17 +7,10 @@ import RedditResults from './RedditResults';
 import { Link } from 'react-router-dom';
 
 class CryptoNews extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			redditResults: [],
-			showModal: false
-		};
-		// the modal that opens when '?' at top of page is clicked.
-		this.handleOpenModal = this.handleOpenModal.bind(this);
-		this.handleCloseModal = this.handleCloseModal.bind(this);
-	}
+	state = {
+		redditResults: [],
+		showModal: false
+	};
 
 	componentDidMount() {
 		getRedditResults(this.props.chosenCryptoName).then(response => {
@@ -41,13 +34,13 @@ class CryptoNews extends Component {
 		}
 	}
 
-	handleOpenModal() {
+	handleOpenModal = () => {
 		this.setState({ showModal: true });
-	}
+	};
 
-	handleCloseModal() {
+	handleCloseModal = () => {
 		this.setState({ showModal: false });
-	}
+	};
 
 	render() {
 		ReactModal.setAppElement('#root');

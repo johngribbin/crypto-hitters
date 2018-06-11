@@ -2,15 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class SearchBar extends Component {
-	constructor(props) {
-		super(props);
-
-		this.handleSearchTerm = this.handleSearchTerm.bind(this);
-	}
-
-	handleSearchTerm(event) {
+	handleSearchTerm = event => {
 		this.props.handleSearchTerm(event.target.value);
-	}
+	};
 
 	render() {
 		return (
