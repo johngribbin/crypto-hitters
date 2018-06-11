@@ -26,22 +26,26 @@ class HeaderBar extends Component {
 	};
 
 	render() {
+		ReactModal.setAppElement('#root');
+		const { showAboutModal, showContactModal } = this.state;
+		const { handleOpenAboutModal, handleCloseAboutModal, handleOpenContactModal, handleCloseContactModal } = this;
+
 		return (
 			<div className="header-bar__container">
 				<h1 className="header-bar__app-title">CRYPTO HITTERS</h1>
 
 				<div className="header-bar__icon-container hide-on-phone">
-					<i className="material-icons md-36" onClick={this.handleOpenAboutModal}>
+					<i className="material-icons md-36" onClick={handleOpenAboutModal}>
 						info_outline
 					</i>
 
-					<i className="material-icons md-36" onClick={this.handleOpenContactModal}>
+					<i className="material-icons md-36" onClick={handleOpenContactModal}>
 						email
 					</i>
 				</div>
 
-				<ReactModal isOpen={this.state.showAboutModal} contentLabel="Minimal Modal Example">
-					<i class="material-icons md-36 float-right" onClick={this.handleCloseAboutModal}>
+				<ReactModal isOpen={showAboutModal} contentLabel="Minimal Modal Example">
+					<i className="material-icons md-36 float-right" onClick={handleCloseAboutModal}>
 						close
 					</i>
 
@@ -98,8 +102,8 @@ class HeaderBar extends Component {
 					</div>
 				</ReactModal>
 
-				<ReactModal isOpen={this.state.showContactModal} contentLabel="Minimal Modal Example">
-					<i class="material-icons md-36 float-right" onClick={this.handleCloseContactModal}>
+				<ReactModal isOpen={showContactModal} contentLabel="Minimal Modal Example">
+					<i className="material-icons md-36 float-right" onClick={handleCloseContactModal}>
 						close
 					</i>
 

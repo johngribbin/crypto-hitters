@@ -19,27 +19,32 @@ class CryptoRows extends Component {
 		}
 	};
 
-	// send the chosenCryptoName, chosenCryptoSymbol and chosenCryptoPrice to the application state
+	// send the chosenCryptoName, chosenCryptoSymbol to the application state
 	handleChosenCrypto = event => {
-		this.props.handleChosenCryptoName(event.target.name);
-		this.props.handleChosenCryptoSymbol(event.target.id);
+		const { handleChosenCryptoName, handleChosenCryptoSymbol } = this.props;
+
+		handleChosenCryptoName(event.target.name);
+		handleChosenCryptoSymbol(event.target.id);
 	};
 
 	render() {
-		const searchTerm = this.props.searchTerm;
-		let tickers;
+		const { handleArrowHover, handleChosenCrypto } = this;
+		const { searchTerm, tickers } = this.props;
+
+		let tickersToDisplay;
 
 		// render only the tickers with a name or symbol name that match the searchTerm entered into searchBar
 		if (searchTerm !== '') {
-			const filteredTickers = this.props.tickers.filter(
+			const filteredTickers = tickers.filter(
 				ticker => `${ticker.name} ${ticker.symbol}`.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0
 			);
-			tickers = filteredTickers;
-			// render all 100 ticker rows when nothing is typed into searchBar
+			tickersToDisplay = filteredTickers;
+			// else render all 100 ticker rows when nothing is typed into searchBar
 		} else {
-			tickers = this.props.tickers;
+			tickersToDisplay = tickers;
 		}
-		return tickers.map(ticker => (
+
+		return tickersToDisplay.map(ticker => (
 			<tr key={ticker.name} className="crypto-rows__row" id={`crypto-rows__${ticker.symbol}-row`}>
 				<td className="crypto-table__table-row-data">{ticker.rank}</td>
 				<td className="crypto-table__table-row-data">
@@ -69,9 +74,9 @@ class CryptoRows extends Component {
 							alt="right arrow"
 							name={ticker.name}
 							id={ticker.symbol}
-							onMouseEnter={this.handleArrowHover}
-							onMouseLeave={this.handleArrowHover}
-							onClick={this.handleChosenCrypto}
+							onMouseEnter={handleArrowHover}
+							onMouseLeave={handleArrowHover}
+							onClick={handleChosenCrypto}
 						/>
 					</Link>
 				</td>

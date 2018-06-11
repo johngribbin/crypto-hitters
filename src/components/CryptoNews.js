@@ -13,8 +13,10 @@ class CryptoNews extends Component {
 	};
 
 	componentDidMount() {
-		getRedditResults(this.props.chosenCryptoName).then(response => {
-			let sortedRedditResults = sortBySubreddit(response.data.data.children, this.props.chosenCryptoName);
+		const { chosenCryptoName } = this.props;
+
+		getRedditResults(chosenCryptoName).then(response => {
+			let sortedRedditResults = sortBySubreddit(response.data.data.children, chosenCryptoName);
 
 			this.setState({
 				redditResults: sortedRedditResults
@@ -23,9 +25,11 @@ class CryptoNews extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if (this.props.chosenCryptoName !== nextProps.chosenCryptoName) {
+		const { chosenCryptoName } = this.props;
+
+		if (chosenCryptoName !== nextProps.chosenCryptoName) {
 			getRedditResults(nextProps.chosenCryptoName).then(response => {
-				let sortedRedditResults = sortBySubreddit(response.data.data.children, this.props.chosenCryptoName);
+				let sortedRedditResults = sortBySubreddit(response.data.data.children, chosenCryptoName);
 
 				this.setState({
 					redditResults: sortedRedditResults
@@ -44,13 +48,16 @@ class CryptoNews extends Component {
 
 	render() {
 		ReactModal.setAppElement('#root');
+		const { showModal, redditResults } = this.state;
+		const { handleOpenModal, handleCloseModal } = this;
+		const { chosenCryptoName, chosenCryptoSymbol } = this.props;
 
 		return (
 			<div>
 				<h1 className="news__app-title">CRYPTO HITTERS</h1>
 				{/* help icon moves to top right on cell phone view */}
 				<div className="news__phone-help-icon">
-					<i className="material-icons md-36" onClick={this.handleOpenModal}>
+					<i className="material-icons md-36" onClick={handleOpenModal}>
 						help
 					</i>
 				</div>
@@ -65,19 +72,17 @@ class CryptoNews extends Component {
 						<div className="news__crypto-logo-name-container">
 							<img
 								className="news__ticker-image"
-								src={`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/color/${this.props.chosenCryptoSymbol.toLowerCase()}.png`}
-								alt={this.props.chosenCryptoSymbol}
+								src={`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/color/${chosenCryptoSymbol.toLowerCase()}.png`}
+								alt={chosenCryptoSymbol}
 							/>
-							<h1 className="news__header-text">{this.props.chosenCryptoName}</h1>
+							<h1 className="news__header-text">{chosenCryptoName}</h1>
 						</div>
 						REDDIT COMMUNITY RESULTS
 					</div>
 
 					<div className="news__icon-container--right">
 						<a
-							href={`https://duckduckgo.com/?q=${
-								this.props.chosenCryptoName
-							}+cryptocurrency+news&t=hb&atb=v109-3&df=d&ia=web`}
+							href={`https://duckduckgo.com/?q=${chosenCryptoName}+cryptocurrency+news&t=hb&atb=v109-3&df=d&ia=web`}
 							target="_blank"
 						>
 							<div className="hide-on-phone">
@@ -88,7 +93,7 @@ class CryptoNews extends Component {
 							<i className="material-icons md-36">show_chart</i>
 						</Link>
 						<div className="hide-on-phone">
-							<i className="material-icons md-36" onClick={this.handleOpenModal}>
+							<i className="material-icons md-36" onClick={handleOpenModal}>
 								help
 							</i>
 						</div>
@@ -96,8 +101,8 @@ class CryptoNews extends Component {
 				</section>
 
 				{/* this is the 'help' modal content */}
-				<ReactModal isOpen={this.state.showModal} contentLabel="Minimal Modal Example">
-					<i className="material-icons md-36 float-right" onClick={this.handleCloseModal}>
+				<ReactModal isOpen={showModal} contentLabel="Minimal Modal Example">
+					<i className="material-icons md-36 float-right" onClick={handleCloseModal}>
 						close
 					</i>
 					<div className="modal__container">
@@ -122,9 +127,7 @@ class CryptoNews extends Component {
 								{/* the globe icon appears inside help modal on cellphone views */}
 								<li className="modal__list-item modal__globe-icon-list-item">
 									<a
-										href={`https://duckduckgo.com/?q=${
-											this.props.chosenCryptoName
-										}+cryptocurrency+news&t=hb&atb=v109-3&df=d&ia=web`}
+										href={`https://duckduckgo.com/?q=${chosenCryptoName}+cryptocurrency+news&t=hb&atb=v109-3&df=d&ia=web`}
 										target="_blank"
 									>
 										<div className>
@@ -138,10 +141,7 @@ class CryptoNews extends Component {
 				</ReactModal>
 
 				<ul className="news__reddit-list">
-					<RedditResults
-						redditResults={this.state.redditResults}
-						chosenCryptoName={this.props.chosenCryptoName}
-					/>
+					<RedditResults redditResults={redditResults} chosenCryptoName={chosenCryptoName} />
 				</ul>
 			</div>
 		);

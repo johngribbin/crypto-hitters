@@ -11,7 +11,9 @@ class CryptoChart extends Component {
 
 	// 'obj.close' is the 'closing price' on the day
 	componentDidMount() {
-		getChartData(this.props.chosenCryptoSymbol).then(response => {
+		const { chosenCryptoSymbol } = this.props;
+
+		getChartData(chosenCryptoSymbol).then(response => {
 			this.setState({
 				chartData: response.data.Data.map(obj => obj.close)
 			});
@@ -19,7 +21,9 @@ class CryptoChart extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if (this.props.chosenCryptoSymbol !== nextProps.chosenCryptoSymbol) {
+		const { chosenCryptoSymbol } = this.props;
+
+		if (chosenCryptoSymbol !== nextProps.chosenCryptoSymbol) {
 			getChartData(nextProps.chosenCryptoSymbol).then(response => {
 				this.setState({
 					chartData: response.data.Data.map(obj => obj.close)
@@ -29,6 +33,9 @@ class CryptoChart extends Component {
 	}
 
 	render() {
+		const { chartData } = this.state;
+		const { chosenCryptoSymbol, chosenCryptoName } = this.props;
+
 		return (
 			<div>
 				<h1 className="news__app-title">CRYPTO HITTERS</h1>
@@ -44,9 +51,9 @@ class CryptoChart extends Component {
 							<img
 								className="news__ticker-image"
 								src={`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/color/${this.props.chosenCryptoSymbol.toLowerCase()}.png`}
-								alt={this.props.chosenCryptoSymbol}
+								alt={chosenCryptoSymbol}
 							/>
-							<h1 className="news__header-text">{this.props.chosenCryptoName}</h1>
+							<h1 className="news__header-text">{chosenCryptoName}</h1>
 						</div>
 						SIXTY DAY PRICE ACTION
 					</div>
@@ -128,7 +135,7 @@ class CryptoChart extends Component {
 								{
 									backgroundColor: 'rgb(251, 145, 58)',
 									borderColor: 'rgb(251, 145, 58)',
-									data: this.state.chartData,
+									data: chartData,
 									fontFamily: 'Source Code Pro',
 									fill: false,
 									label: 'Price (USD)',
@@ -151,7 +158,7 @@ class CryptoChart extends Component {
 								display: true,
 								fontColor: 'black',
 								fontFamily: 'Source Code Pro',
-								text: `60 Day Price Action of ${this.props.chosenCryptoName}`
+								text: `60 Day Price Action of ${chosenCryptoName}`
 							},
 							scales: {
 								yAxes: [
@@ -185,8 +192,7 @@ class CryptoChart extends Component {
 
 CryptoChart.propTypes = {
 	chosenCryptoSymbol: PropTypes.string,
-	chosenCryptoName: PropTypes.string,
-	chosenCryptoPrice: PropTypes.number
+	chosenCryptoName: PropTypes.string
 };
 
 export default CryptoChart;

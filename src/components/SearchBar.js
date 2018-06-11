@@ -3,17 +3,21 @@ import PropTypes from 'prop-types';
 
 class SearchBar extends Component {
 	handleSearchTerm = event => {
-		this.props.handleSearchTerm(event.target.value);
+		const { handleSearchTerm } = this.props;
+		handleSearchTerm(event.target.value);
 	};
 
 	render() {
+		const { handleSearchTerm } = this;
+		const { searchTerm } = this.props;
+
 		return (
 			<div className="search-bar__container hide-on-phone">
 				<input
 					className="search-bar__input"
 					placeholder={`filter list by name/symbol`}
-					value={this.props.searchTerm}
-					onChange={this.handleSearchTerm}
+					value={searchTerm}
+					onChange={handleSearchTerm}
 				/>
 			</div>
 		);

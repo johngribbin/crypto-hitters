@@ -19,15 +19,15 @@ class CryptoTable extends Component {
 	}
 
 	sortStringData = event => {
-		const currentTickers = this.state.tickers;
+		const { tickers } = this.state;
 		const headerName = event.target.value;
 		let sortedTickers;
 
 		if (event.target.checked === true) {
-			sortedTickers = currentTickers.sort(sortStringData(headerName));
+			sortedTickers = tickers.sort(sortStringData(headerName));
 		} else {
 			// sort column descending on second click
-			sortedTickers = currentTickers.sort(sortStringData(headerName, 'desc'));
+			sortedTickers = tickers.sort(sortStringData(headerName, 'desc'));
 		}
 
 		this.setState({
@@ -36,15 +36,15 @@ class CryptoTable extends Component {
 	};
 
 	sortNumberData = event => {
-		const currentTickers = this.state.tickers;
+		const { tickers } = this.state;
 		const headerName = event.target.value;
 		let sortedTickers;
 
 		if (event.target.checked === true) {
-			sortedTickers = sortNumberData(currentTickers, headerName);
+			sortedTickers = sortNumberData(tickers, headerName);
 		} else {
 			// sort the columb smallest to largest on second click
-			sortedTickers = sortNumberData(currentTickers, headerName).reverse();
+			sortedTickers = sortNumberData(tickers, headerName).reverse();
 		}
 
 		this.setState({
@@ -53,6 +53,10 @@ class CryptoTable extends Component {
 	};
 
 	render() {
+		const { tickers } = this.state;
+		const { sortStringData, sortNumberData } = this;
+		const { searchTerm, handleChosenCryptoName, handleChosenCryptoSymbol } = this.props;
+
 		return (
 			<div className="crypto-table__container" overflow="auto">
 				<table className="crypto-table__table" cellPadding="0" cellSpacing="0">
@@ -69,7 +73,7 @@ class CryptoTable extends Component {
 										type="checkbox"
 										className="crypto-table__checkbox"
 										value="rank"
-										onClick={this.sortNumberData}
+										onClick={sortNumberData}
 									/>
 								</label>
 							</td>
@@ -84,7 +88,7 @@ class CryptoTable extends Component {
 										type="checkbox"
 										className="crypto-table__checkbox"
 										value="name"
-										onClick={this.sortStringData}
+										onClick={sortStringData}
 									/>
 								</label>
 							</td>
@@ -99,7 +103,7 @@ class CryptoTable extends Component {
 										type="checkbox"
 										className="crypto-table__checkbox"
 										value="symbol"
-										onClick={this.sortStringData}
+										onClick={sortStringData}
 									/>
 								</label>
 							</td>
@@ -114,7 +118,7 @@ class CryptoTable extends Component {
 										type="checkbox"
 										className="crypto-table__checkbox"
 										value="price_usd"
-										onClick={this.sortNumberData}
+										onClick={sortNumberData}
 									/>
 								</label>
 							</td>
@@ -129,7 +133,7 @@ class CryptoTable extends Component {
 										type="checkbox"
 										className="crypto-table__checkbox"
 										value="market_cap_usd"
-										onClick={this.sortNumberData}
+										onClick={sortNumberData}
 									/>
 								</label>
 							</td>
@@ -144,7 +148,7 @@ class CryptoTable extends Component {
 										type="checkbox"
 										className="crypto-table__checkbox"
 										value="percent_change_24h"
-										onClick={this.sortNumberData}
+										onClick={sortNumberData}
 									/>
 								</label>
 							</td>
@@ -158,10 +162,10 @@ class CryptoTable extends Component {
 
 					<tbody className="crypto-table__table-body">
 						<CryptoRows
-							tickers={this.state.tickers}
-							searchTerm={this.props.searchTerm}
-							handleChosenCryptoName={this.props.handleChosenCryptoName}
-							handleChosenCryptoSymbol={this.props.handleChosenCryptoSymbol}
+							tickers={tickers}
+							searchTerm={searchTerm}
+							handleChosenCryptoName={handleChosenCryptoName}
+							handleChosenCryptoSymbol={handleChosenCryptoSymbol}
 						/>
 					</tbody>
 				</table>
@@ -172,7 +176,8 @@ class CryptoTable extends Component {
 
 CryptoTable.propTypes = {
 	searchTerm: PropTypes.string,
-	handleMoveToNews: PropTypes.func
+	handleChosenCryptoSymbol: PropTypes.func,
+	handleChosenCryptoName: PropTypes.func
 };
 
 export default CryptoTable;

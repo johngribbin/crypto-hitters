@@ -5,7 +5,9 @@ const backupImg = 'https://b.thumbs.redditmedia.com/bPKOyEBxXWkTmItsSshOs-j273O2
 
 class RedditResults extends Component {
 	render() {
-		return this.props.redditResults.map(result => (
+		const { redditResults, chosenCryptoName } = this.props;
+
+		return redditResults.map(result => (
 			<li key={result.data.id} className="news__reddit-item">
 				<div className="news__reddit-item-content">
 					<div className="news__reddit-item-content--top">
@@ -38,7 +40,7 @@ class RedditResults extends Component {
 							<a
 								className={
 									// if subreddit name contains the chosenCryptoName, render the link green
-									result.data.subreddit.match(new RegExp(this.props.chosenCryptoName, 'i'))
+									result.data.subreddit.match(new RegExp(chosenCryptoName, 'i'))
 										? 'news__reddit-item-link float-right regular-green'
 										: 'news__reddit-item-link float-right'
 								}
