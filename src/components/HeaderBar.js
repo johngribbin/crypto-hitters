@@ -32,8 +32,11 @@ class HeaderBar extends Component {
 
 		return (
 			<div className="header-bar__container">
-				<h1 className="header-bar__app-title">CRYPTO HITTERS</h1>
-
+				<div>
+					<h1 className="header-bar__app-title">CRYPTO HITTERS</h1>
+					<p className="header-bar__app-tagline">Price. Goss. Chart.</p>
+				</div>
+				
 				<div className="header-bar__icon-container hide-on-phone">
 					<i className="material-icons md-36" onClick={handleOpenAboutModal}>
 						info_outline

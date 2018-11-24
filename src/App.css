@@ -25,6 +25,10 @@ HeaderBar
 	color: white;
 }
 
+.header-bar__app-tagline {
+	color: white;
+}
+
 .header-bar__icon-container {
 	align-items: center;
 	display: flex;
