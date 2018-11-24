@@ -551,6 +551,10 @@ MEDIA QUERIES
 		margin-bottom: 1em;
 	}
 
+	.header-bar__app-tagline {
+		display: none;
+	}
+
 	.bm-burger-button {
 		display: block;
 	}
