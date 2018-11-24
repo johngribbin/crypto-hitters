@@ -34,7 +34,7 @@ class HeaderBar extends Component {
 			<div className="header-bar__container">
 				<div>
 					<h1 className="header-bar__app-title">CRYPTO HITTERS</h1>
-					<p className="header-bar__app-tagline">Price. Goss. Chart.</p>
+					<p className="header-bar__app-tagline">Price -> News -> Chart.</p>
 				</div>
 				
 				<div className="header-bar__icon-container hide-on-phone">
@@ -125,7 +125,7 @@ class HeaderBar extends Component {
 								</a>
 							</div>
 							<a className="contact-modal__email-link" href="mailto:johnggribbin@gmail.com">
-								johnggribbin@gmail.com
+								john.gribbin@consensys.net
 							</a>
 						</div>
 					</div>
