@@ -35,8 +35,6 @@ class CryptoRows extends Component {
     const { handleArrowHover, handleChosenCrypto } = this;
     const { searchTerm, tickers } = this.props;
 
-    console.log(tickers);
-
     let tickersToDisplay;
 
     // render only the tickers with a name or symbol name that match the searchTerm entered into searchBar
@@ -65,7 +63,7 @@ class CryptoRows extends Component {
             <img
               className="crypto-rows__ticker-image"
               id={`crypto-rows__${ticker.symbol}-image`}
-              src={`https://raw.githubusercontent.com/cjdowner/cryptocurrency-icons/master/128/color/${ticker.symbol.toLowerCase()}.png`}
+              src={`https://raw.githubusercontent.com/atomiclabs/cryptocurrency-icons/master/32%402x/color/${ticker.symbol.toLowerCase()}%402x.png`}
               alt={ticker.symbol}
             />
             {ticker.name}
