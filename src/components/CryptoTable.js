@@ -10,13 +10,12 @@ class CryptoTable extends Component {
     tickers: [],
   };
 
-  componentDidMount() {
-    // getAllTickers().then((response) => {
-    //   this.setState({
-    //     tickers: response.data,
-    //   });
-    // });
-    getAllTickers();
+  async componentDidMount() {
+    const tickers = await getAllTickers();
+
+    this.setState({
+      tickers: tickers,
+    });
   }
 
   sortStringData = (event) => {
