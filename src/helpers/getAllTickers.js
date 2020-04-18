@@ -5,7 +5,6 @@ export default async function getAllTickers() {
   const REACT_APP_CMC_PRO_API_KEY =
     process.env.REACT_APP_CMC_PRO_API_KEY || null; // replace null with your own CoinMarketCap API key when running locally
   console.log(`react app cmc api key = `, REACT_APP_CMC_PRO_API_KEY);
-  console.log(process.env);
 
   const response = await fetch(
     "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
