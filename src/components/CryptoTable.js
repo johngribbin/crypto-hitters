@@ -61,8 +61,6 @@ class CryptoTable extends Component {
       handleChosenCryptoSymbol,
     } = this.props;
 
-    console.log(tickers);
-
     return tickers.length === 0 ? (
       <h1 className="app__loading-text">...Loading</h1>
     ) : (
