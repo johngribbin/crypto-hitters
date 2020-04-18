@@ -1,7 +1,12 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default function getRedditResults(cryptoName) {
-	const request = axios.get(`https://www.reddit.com/search.json?q=${cryptoName}&sort=top&t=day`);
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
-	return request;
+  const request = axios.get(
+    proxyurl +
+      `https://www.reddit.com/search.json?q=${cryptoName}&sort=top&t=day`
+  );
+
+  return request;
 }
