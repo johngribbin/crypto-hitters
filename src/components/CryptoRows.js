@@ -51,56 +51,60 @@ class CryptoRows extends Component {
       tickersToDisplay = tickers;
     }
 
-    return tickersToDisplay.map((ticker) => (
-      <tr
-        key={ticker.name}
-        className="crypto-rows__row"
-        id={`crypto-rows__${ticker.symbol}-row`}
-      >
-        <td className="crypto-table__table-row-data">{ticker.cmc_rank}</td>
-        <td className="crypto-table__table-row-data">
-          <div className="crypto-rows__crypto-name-data-content">
-            <img
-              className="crypto-rows__ticker-image"
-              id={`crypto-rows__${ticker.symbol}-image`}
-              src={`https://raw.githubusercontent.com/atomiclabs/cryptocurrency-icons/master/32%402x/color/${ticker.symbol.toLowerCase()}%402x.png`}
-              alt={ticker.symbol}
-            />
-            {ticker.name}
-          </div>
-        </td>
-        <td className="crypto-table__table-row-data hide-on-ipad">
-          {ticker.symbol}
-        </td>
-        <td className="crypto-table__table-row-data">
-          ${ticker.quote.USD.price.toFixed(2)}
-        </td>
-        <td className="crypto-table__table-row-data hide-on-tablet">
-          ${ticker.quote.USD.market_cap.toLocaleString()}
-        </td>
-        {/* render % increase as green text, % decrease as red text*/}
-        <td
-          className={
-            ticker.quote.USD.percent_change_24h < 0 ? "red-text" : "green-text"
-          }
-        >
-          {ticker.quote.USD.percent_change_24h.toFixed(2)}%
-        </td>
-        <td>
-          <Link to="/news">
-            <img
-              src={ArrowRight1x}
-              alt="right arrow"
-              name={ticker.name}
-              id={ticker.symbol}
-              onMouseEnter={handleArrowHover}
-              onMouseLeave={handleArrowHover}
-              onClick={handleChosenCrypto}
-            />
-          </Link>
-        </td>
-      </tr>
-    ));
+    return tickersToDisplay.length === 0
+      ? null
+      : tickersToDisplay.map((ticker) => (
+          <tr
+            key={ticker.name}
+            className="crypto-rows__row"
+            id={`crypto-rows__${ticker.symbol}-row`}
+          >
+            <td className="crypto-table__table-row-data">{ticker.cmc_rank}</td>
+            <td className="crypto-table__table-row-data">
+              <div className="crypto-rows__crypto-name-data-content">
+                <img
+                  className="crypto-rows__ticker-image"
+                  id={`crypto-rows__${ticker.symbol}-image`}
+                  src={`https://raw.githubusercontent.com/atomiclabs/cryptocurrency-icons/master/32%402x/color/${ticker.symbol.toLowerCase()}%402x.png`}
+                  alt={ticker.symbol}
+                />
+                {ticker.name}
+              </div>
+            </td>
+            <td className="crypto-table__table-row-data hide-on-ipad">
+              {ticker.symbol}
+            </td>
+            <td className="crypto-table__table-row-data">
+              ${ticker.quote.USD.price.toFixed(2)}
+            </td>
+            <td className="crypto-table__table-row-data hide-on-tablet">
+              ${ticker.quote.USD.market_cap.toLocaleString()}
+            </td>
+            {/* render % increase as green text, % decrease as red text*/}
+            <td
+              className={
+                ticker.quote.USD.percent_change_24h < 0
+                  ? "red-text"
+                  : "green-text"
+              }
+            >
+              {ticker.quote.USD.percent_change_24h.toFixed(2)}%
+            </td>
+            <td>
+              <Link to="/news">
+                <img
+                  src={ArrowRight1x}
+                  alt="right arrow"
+                  name={ticker.name}
+                  id={ticker.symbol}
+                  onMouseEnter={handleArrowHover}
+                  onMouseLeave={handleArrowHover}
+                  onClick={handleChosenCrypto}
+                />
+              </Link>
+            </td>
+          </tr>
+        ));
   }
 }
 

@@ -1,5 +1,3 @@
-import axios from "axios";
-
 export default async function getAllTickers() {
   const REACT_APP_CMC_PRO_API_KEY =
     process.env.REACT_APP_CMC_PRO_API_KEY || null; // replace null with your own CoinMarketCap API key when running locally
