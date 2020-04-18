@@ -13,7 +13,7 @@ export default async function getAllTickers() {
         convert: "USD,BTC",
       },
       headers: {
-        Accept: "application/json",
+        //Accept: "application/json",
         "Accept-Encoding": "deflate, gzip",
         "X-CMC_PRO_API_KEY": `${REACT_APP_CMC_PRO_API_KEY}`,
       },
